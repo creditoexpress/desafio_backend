@@ -1,0 +1,83 @@
+version: '3'
+services:
+
+  flask:
+    build:
+      context: app
+      dockerfile: Dockerfile
+    container_name: flask
+    image: digitalocean.com/flask-python:3.6
+    restart: unless-stopped
+    environment:
+      APP_ENV: "dev"
+      APP_DEBUG: "True"
+      APP_PORT: 5000
+      MONGODB_DATABASE: desafio_backend
+      MONGODB_USERNAME: desafio_backend
+      MONGODB_PASSWORD: desafio_backend
+      MONGODB_HOSTNAME: mongodb
+      PYTHONUNBUFFERED: 1
+      ENV_FILE_LOCATION: ./.env
+    volumes:
+      - appdata:/var/www/html/desafio_backend:Z
+      - .:/var/www/html/desafio_backend
+    working_dir:
+      /var/www/html/desafio_backend
+    depends_on:
+      - mongodb
+    networks:
+      - frontend
+      - backend
+
+  mongodb:
+    image: mongo:4.0.8
+    container_name: mongodb
+    restart: unless-stopped
+    command: mongod --auth
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: desafio_backend
+      MONGODB_DATA_DIR: /data/db
+      MONDODB_LOG_DIR: /dev/null
+    volumes:
+      - mongodbdata:/data/db
+    networks:
+      - backend
+
+  webserver:
+    build:
+      context: nginx
+      dockerfile: Dockerfile
+    image: digitalocean.com/webserver:latest
+    tty: true
+    container_name: webserver
+    restart: unless-stopped
+    environment:
+      APP_ENV: "prod"
+      APP_NAME: "webserver"
+      APP_DEBUG: "true"
+      SERVICE_NAME: "webserver"
+    ports:
+      - "3000:80"
+      - "3443:443"
+    volumes:
+      - nginxdata:/var/log/nginx
+    depends_on:
+      - flask
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
+
+volumes:
+  mongodbdata:
+    external: true
+  appdata:
+    driver: local
+  nginxdata:
+    driver: local

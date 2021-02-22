@@ -1,0 +1,932 @@
+DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from <main> at bin/rails:4)
+DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from <main> at bin/rails:4)
+DEPRECATION WARNING: `Module#parent` has been renamed to `module_parent`. `parent` is deprecated and will be removed in Rails 6.1. (called from <main> at bin/rails:4)
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.count | STARTED | {"count"=>"clients", "query"=>{}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47312576728640 type=uuid data=0xd30b1a459bdc4d63...>}}
+MONGODB | db:27017 req:7 | credito_express_development.count | SUCCEEDED | 0.000s
+MONGODB | db:27017 req:8 conn:1:1 | credito_express_development.insert | STARTED | {"insert"=>"fees", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('6030264358e9820001955a39'), "kind"=>"NEGATIVADO", "rates"=>{"6"=>0.04, "12"=>0.045, "18"=>0.05, "24"=>0.053, "36"=>0.055}}], "$db"=>"credito_express_development", "lsid"=>{"id"=...
+MONGODB | db:27017 req:8 | credito_express_development.insert | SUCCEEDED | 0.010s
+MONGODB | db:27017 req:9 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47312576728640 type=uuid data=0xd30b1a459bdc4d63...>}}
+MONGODB | db:27017 req:9 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:10 conn:1:1 | credito_express_development.insert | STARTED | {"insert"=>"fees", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('6030267758e9820001955a3a'), "kind"=>"SCORE_ALTO", "rates"=>{"6"=>0.02, "12"=>0.025, "18"=>0.35, "24"=>0.038, "36"=>0.04}}], "$db"=>"credito_express_development", "lsid"=>{"id"=>...
+MONGODB | db:27017 req:10 | credito_express_development.insert | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:11 conn:1:1 | credito_express_development.insert | STARTED | {"insert"=>"fees", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('603026a858e9820001955a3b'), "kind"=>"SCORE_BAIXO", "rates"=>{"6"=>0.03, "12"=>0.035, "18"=>0.45, "24"=>0.048, "36"=>0.05}}], "$db"=>"credito_express_development", "lsid"=>{"id"=...
+MONGODB | db:27017 req:11 | credito_express_development.insert | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:12 conn:1:1 | credito_express_development.count | STARTED | {"count"=>"fees", "query"=>{}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47312576728640 type=uuid data=0xd30b1a459bdc4d63...>}}
+MONGODB | db:27017 req:12 | credito_express_development.count | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:13 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{}, "sort"=>{"_id"=>-1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47312576728640 type=uuid data=0xd30b1a459bdc4d63...>}}
+MONGODB | db:27017 req:13 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:14 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47312576728640 type=uuid data=0xd30b1a459bdc4d63...>}}
+MONGODB | db:27017 req:14 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:15 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47312576728640 type=uuid data=0xd30b1a459bdc4d63...>}}
+MONGODB | db:27017 req:15 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:16 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47312576728640 type=uuid data=0xd30b1a459bdc4d63...>}}
+MONGODB | db:27017 req:16 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:18 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47312576728640 type=uuid data=0xd30b1a459bdc4d63...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:18 | admin.endSessions | SUCCEEDED | 0.000s
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70293884265340 type=uuid data=0xbd9967c969bf4720...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:9 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70293884265340 type=uuid data=0xbd9967c969bf4720...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:9 | admin.endSessions | SUCCEEDED | 0.000s
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47354139003080 type=uuid data=0x39b6c2422ed74a2d...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.000s
+MONGODB | db:27017 req:8 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47354139003080 type=uuid data=0x39b6c2422ed74a2d...>}}
+MONGODB | db:27017 req:8 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:10 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47354139003080 type=uuid data=0x39b6c2422ed74a2d...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:10 | admin.endSessions | SUCCEEDED | 0.000s
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:16:48 +0000
+  
+ActionController::RoutingError (uninitialized constant FeesController
+Did you mean?  FeesContoller):
+  
+actionpack (6.0.3.5) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.5) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.5) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:17:40 +0000
+  
+ActionController::RoutingError (uninitialized constant FeesController
+Did you mean?  FeesContoller):
+  
+actionpack (6.0.3.5) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.5) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.5) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:18:31 +0000
+  
+ActionController::RoutingError (uninitialized constant FeesController
+Did you mean?  FeesContoller):
+  
+actionpack (6.0.3.5) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.5) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.5) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:19:09 +0000
+  
+ActionController::RoutingError (uninitialized constant FeesController
+Did you mean?  FeesContoller):
+  
+actionpack (6.0.3.5) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.5) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.5) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.5) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.5) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:19:50 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>6, "fee"=>{}}
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 500 Internal Server Error in 11ms (MongoDB: 0.0ms | Allocations: 2447)
+
+
+  
+ArgumentError (Unrecognized status code :success):
+  
+app/controllers/fees_controller.rb:16:in `simulate'
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:20:08 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>6, "fee"=>{}}
+MONGODB | db:27017 req:8 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:8 | credito_express_development.find | SUCCEEDED | 0.002s
+Completed 200 OK in 5ms (Views: 0.3ms | MongoDB: 0.0ms | Allocations: 932)
+
+
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.insert | STARTED | {"insert"=>"clients", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('60302c0ddb3ec80001fd92c2'), "name"=>"Alessandro Guedes", "document"=>"39966628827", "phone"=>"(34) 99267-0063", "score"=>1000, "negative"=>false}], "$db"=>"credito_express_de...
+MONGODB | db:27017 req:7 | credito_express_development.insert | SUCCEEDED | 0.008s
+MONGODB | db:27017 req:8 conn:1:1 | credito_express_development.insert | STARTED | {"insert"=>"clients", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('60302c3cdb3ec80001fd92c3'), "name"=>"Hudson Guedes", "document"=>"41258051800", "phone"=>"(34) 91487422", "score"=>499, "negative"=>false}], "$db"=>"credito_express_developme...
+MONGODB | db:27017 req:8 | credito_express_development.insert | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:9 conn:1:1 | credito_express_development.insert | STARTED | {"insert"=>"clients", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('60302c56db3ec80001fd92c4'), "name"=>"Bastiao", "document"=>"123", "phone"=>"(34) 123123", "score"=>1000, "negative"=>true}], "$db"=>"credito_express_development", "lsid"=>{"i...
+MONGODB | db:27017 req:9 | credito_express_development.insert | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:11 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47290899537960 type=uuid data=0x2ae399a76a8d4f51...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:11 | admin.endSessions | SUCCEEDED | 0.000s
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.count | STARTED | {"count"=>"clients", "query"=>{}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47095235796220 type=uuid data=0x7780faea9bcf4147...>}}
+MONGODB | db:27017 req:7 | credito_express_development.count | SUCCEEDED | 0.000s
+MONGODB | db:27017 req:9 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47095235796220 type=uuid data=0x7780faea9bcf4147...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:9 | admin.endSessions | SUCCEEDED | 0.000s
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:25:06 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-00633", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}}
+MONGODB | db:27017 req:9 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:9 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 204 No Content in 3ms (MongoDB: 0.0ms | Allocations: 861)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:25:30 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-00633", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}}
+MONGODB | db:27017 req:10 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:10 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:11 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:11 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 6ms (Views: 2.6ms | MongoDB: 0.0ms | Allocations: 1499)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:25:44 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-00633", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}}
+MONGODB | db:27017 req:12 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:12 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:13 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:13 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 6ms (Views: 3.0ms | MongoDB: 0.0ms | Allocations: 1470)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:27:00 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-00633", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}}
+MONGODB | db:27017 req:14 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:14 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 404 Not Found in 5ms (Views: 0.5ms | MongoDB: 0.0ms | Allocations: 918)
+
+
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47220828365240 type=uuid data=0xae6cb1e642a4453b...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.000s
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:27:42 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:15 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:15 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:16 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:16 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:17 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:17 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 8ms (Views: 0.4ms | MongoDB: 0.0ms | Allocations: 2426)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:27:51 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>6, "fee"=>{}}
+MONGODB | db:27017 req:18 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:18 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 4ms (Views: 0.5ms | MongoDB: 0.0ms | Allocations: 915)
+
+
+MONGODB | db:27017 req:9 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47220828365240 type=uuid data=0xae6cb1e642a4453b...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:9 | admin.endSessions | SUCCEEDED | 0.000s
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:29:44 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>6, "fee"=>{}}
+MONGODB | db:27017 req:19 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:19 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 20244ms (Views: 0.4ms | MongoDB: 0.0ms | Allocations: 34205)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:30:27 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:20 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:20 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:21 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:21 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:22 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:22 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:23 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:23 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 19867ms (Views: 0.6ms | MongoDB: 0.0ms | Allocations: 9387)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:30:54 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>6, "fee"=>{}}
+MONGODB | db:27017 req:24 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:24 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 4ms (Views: 0.3ms | MongoDB: 0.0ms | Allocations: 897)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:31:59 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:25 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:25 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:26 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:26 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:27 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:27 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 16409ms (Views: 0.8ms | MongoDB: 0.0ms | Allocations: 174344)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:32:21 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>6, "fee"=>{}}
+MONGODB | db:27017 req:28 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:28 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 3ms (Views: 0.4ms | MongoDB: 0.0ms | Allocations: 877)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:32:42 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:29 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:29 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:30 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:30 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:31 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:31 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 2227ms (Views: 0.7ms | MongoDB: 0.0ms | Allocations: 4412)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:32:49 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>6, "fee"=>{}}
+MONGODB | db:27017 req:32 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:32 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 8123ms (Views: 0.7ms | MongoDB: 0.0ms | Allocations: 8961)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:33:22 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:33 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:33 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:34 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:34 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:35 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:35 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 2450ms (Views: 0.7ms | MongoDB: 0.0ms | Allocations: 4474)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:33:28 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>6, "fee"=>{}}
+MONGODB | db:27017 req:36 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:36 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 5173ms (Views: 0.4ms | MongoDB: 0.0ms | Allocations: 3134)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:34:35 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:37 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:37 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 500 Internal Server Error in 123205ms (MongoDB: 0.0ms | Allocations: 234606)
+
+
+  
+NameError (undefined local variable or method `cookies' for #<ClientsController:0x00007fe5d8016448>):
+  
+app/controllers/clients_controller.rb:16:in `identify'
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:36:40 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:38 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:38 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 500 Internal Server Error in 51609ms (MongoDB: 0.0ms | Allocations: 87619)
+
+
+  
+NameError (undefined local variable or method `cookies' for #<ClientsController:0x00007fe5b8030f98>):
+  
+app/controllers/clients_controller.rb:16:in `identify'
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:37:34 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:39 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:39 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:40 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:40 | credito_express_development.find | SUCCEEDED | 0.002s
+MONGODB | db:27017 req:41 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:41 | credito_express_development.find | SUCCEEDED | 0.003s
+MONGODB | db:27017 req:42 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:42 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 11025ms (Views: 0.8ms | MongoDB: 0.0ms | Allocations: 8747)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 21:38:01 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>6, "fee"=>{}}
+MONGODB | db:27017 req:43 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:43 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 21943ms (Views: 0.4ms | MongoDB: 0.0ms | Allocations: 13786)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:38:28 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:44 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:44 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:45 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:45 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:46 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:46 | credito_express_development.find | SUCCEEDED | 0.002s
+Completed 200 OK in 22705ms (Views: 0.7ms | MongoDB: 0.0ms | Allocations: 262430)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:38:54 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:47 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}}
+MONGODB | db:27017 req:47 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:48 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:48 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:49 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2...
+MONGODB | db:27017 req:49 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 5690ms (Views: 0.7ms | MongoDB: 0.0ms | Allocations: 5267)
+
+
+MONGODB | db:27017 req:51 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70312305651580 type=uuid data=0x9360d756d2a04478...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:51 | admin.endSessions | SUCCEEDED | 0.000s
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:39:58 +0000
+  
+NameError (undefined local variable or method `protect_from_forgery' for ClientsController:Class):
+  
+app/controllers/clients_controller.rb:2:in `<class:ClientsController>'
+app/controllers/clients_controller.rb:1:in `<main>'
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:41:38 +0000
+  
+NameError (undefined local variable or method `protect_from_forgery' for ClientsController:Class):
+  
+app/controllers/clients_controller.rb:2:in `<class:ClientsController>'
+app/controllers/clients_controller.rb:1:in `<main>'
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:41:50 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47200585899460 type=uuid data=0xe5d646bf8cbd436a...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.000s
+Completed 500 Internal Server Error in 6518ms (MongoDB: 0.0ms | Allocations: 78168)
+
+
+  
+NameError (undefined local variable or method `cookies' for #<ClientsController:0x00007fadd407fc18>):
+  
+app/controllers/clients_controller.rb:15:in `identify'
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:42:09 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:8 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47200585899460 type=uuid data=0xe5d646bf8cbd436a...>}}
+MONGODB | db:27017 req:8 | credito_express_development.find | SUCCEEDED | 0.002s
+MONGODB | db:27017 req:9 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47200585899460 type=uuid data=0xe5d646bf8c...
+MONGODB | db:27017 req:9 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:10 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47200585899460 type=uuid data=0xe5d646bf8c...
+MONGODB | db:27017 req:10 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 4511ms (Views: 0.8ms | MongoDB: 0.0ms | Allocations: 5689)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:42:16 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:11 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47200585899460 type=uuid data=0xe5d646bf8cbd436a...>}}
+MONGODB | db:27017 req:11 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:12 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47200585899460 type=uuid data=0xe5d646bf8c...
+MONGODB | db:27017 req:12 | credito_express_development.find | SUCCEEDED | 0.002s
+MONGODB | db:27017 req:13 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47200585899460 type=uuid data=0xe5d646bf8c...
+MONGODB | db:27017 req:13 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 8860ms (Views: 0.6ms | MongoDB: 0.0ms | Allocations: 5738)
+
+
+MONGODB | db:27017 req:15 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47200585899460 type=uuid data=0xe5d646bf8cbd436a...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:15 | admin.endSessions | SUCCEEDED | 0.000s
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:56:43 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x46995392056980 type=uuid data=0x696c9d8c4fc34304...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.001s
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:57:01 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47078742954760 type=uuid data=0x755850cbc0444cef...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.001s
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:57:29 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47254912529120 type=uuid data=0xa7f9ac202b48491d...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:8 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47254912529120 type=uuid data=0xa7f9ac202b...
+MONGODB | db:27017 req:8 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:9 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47254912529120 type=uuid data=0xa7f9ac202b...
+MONGODB | db:27017 req:9 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 2854ms (Views: 0.6ms | MongoDB: 0.0ms | Allocations: 37761)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 21:57:37 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:10 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47254912529120 type=uuid data=0xa7f9ac202b48491d...>}}
+MONGODB | db:27017 req:10 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:11 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"sessions", "filter"=>{"updated_at"=>{"$gt"=>2021-02-17 21:58:23 UTC}}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47254912529120 type=uuid data=0xa7f9ac202b48491d...
+MONGODB | db:27017 req:11 | credito_express_development.find | SUCCEEDED | 0.002s
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:04:25 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f0e4766...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.000s
+MONGODB | db:27017 req:8 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f...
+MONGODB | db:27017 req:8 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:9 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f...
+MONGODB | db:27017 req:9 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 3927ms (Views: 0.7ms | MongoDB: 0.0ms | Allocations: 37879)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:04:45 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:10 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f0e4766...>}}
+MONGODB | db:27017 req:10 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:11 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f...
+MONGODB | db:27017 req:11 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:12 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f...
+MONGODB | db:27017 req:12 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 2054ms (Views: 0.7ms | MongoDB: 0.0ms | Allocations: 5818)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:04:49 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:13 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f0e4766...>}}
+MONGODB | db:27017 req:13 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:14 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f...
+MONGODB | db:27017 req:14 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:15 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f...
+MONGODB | db:27017 req:15 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 11805ms (Views: 0.6ms | MongoDB: 0.0ms | Allocations: 5919)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 22:05:24 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>6, "fee"=>{}}
+MONGODB | db:27017 req:16 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"_id"=>BSON::ObjectId('60302c0ddb3ec80001fd92c2')}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f0e4766...>}}
+MONGODB | db:27017 req:16 | credito_express_development.find | SUCCEEDED | 0.012s
+MONGODB | db:27017 req:17 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_ALTO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f0e4766...>}}
+MONGODB | db:27017 req:17 | credito_express_development.find | SUCCEEDED | 0.002s
+Completed 200 OK in 30086ms (Views: 0.5ms | MongoDB: 0.0ms | Allocations: 802785)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:06:45 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"41258051800", "phone"=>"(34) 9148-7422", "client"=>{"document"=>"41258051800", "phone"=>"(34) 9148-7422"}}
+MONGODB | db:27017 req:18 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"41258051800", "phone"=>"(34) 9148-7422"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f0e4766...>}}
+MONGODB | db:27017 req:18 | credito_express_development.find | SUCCEEDED | 0.003s
+Completed 404 Not Found in 6ms (Views: 0.3ms | MongoDB: 0.0ms | Allocations: 912)
+
+
+MONGODB | db:27017 req:20 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47075150027560 type=uuid data=0x8c7077df5f0e4766...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:20 | admin.endSessions | SUCCEEDED | 0.000s
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47294759961680 type=uuid data=0x67b3da2468494bfe...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.001s
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:07:29 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"41258051800", "phone"=>"(34) 91487422", "client"=>{"document"=>"41258051800", "phone"=>"(34) 91487422"}}
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"41258051800", "phone"=>"(34) 91487422"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d1792324741...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.002s
+MONGODB | db:27017 req:8 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"41258051800", "phone"=>"(34) 91487422"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d179232...
+MONGODB | db:27017 req:8 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:9 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"41258051800", "phone"=>"(34) 91487422"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d179232...
+MONGODB | db:27017 req:9 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 32ms (Views: 0.5ms | MongoDB: 0.0ms | Allocations: 4054)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 22:07:32 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>6, "fee"=>{}}
+MONGODB | db:27017 req:10 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"_id"=>BSON::ObjectId('60302c3cdb3ec80001fd92c3')}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d1792324741...>}}
+MONGODB | db:27017 req:10 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:11 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d1792324741...>}}
+MONGODB | db:27017 req:11 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 6ms (Views: 0.2ms | MongoDB: 0.0ms | Allocations: 1793)
+
+
+MONGODB | db:27017 req:8 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47294759961680 type=uuid data=0x67b3da2468494bfe...>}}
+MONGODB | db:27017 req:8 | credito_express_development.find | SUCCEEDED | 0.001s
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:08:12 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"123", "phone"=>"(34) 123123", "client"=>{"document"=>"123", "phone"=>"(34) 123123"}}
+MONGODB | db:27017 req:12 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"123", "phone"=>"(34) 123123"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d1792324741...>}}
+MONGODB | db:27017 req:12 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:13 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"123", "phone"=>"(34) 123123"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d1792324741...>}}...
+MONGODB | db:27017 req:13 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:14 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"123", "phone"=>"(34) 123123"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d1792324741...>}}...
+MONGODB | db:27017 req:14 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 6ms (Views: 0.5ms | MongoDB: 0.0ms | Allocations: 2444)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 22:08:15 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>6, "fee"=>{}}
+MONGODB | db:27017 req:15 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"_id"=>BSON::ObjectId('60302c56db3ec80001fd92c4')}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d1792324741...>}}
+MONGODB | db:27017 req:15 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:16 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"NEGATIVADO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d1792324741...>}}
+MONGODB | db:27017 req:16 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 8ms (Views: 0.4ms | MongoDB: 0.0ms | Allocations: 1718)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 22:08:28 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>36, "fee"=>{}}
+MONGODB | db:27017 req:17 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"_id"=>BSON::ObjectId('60302c56db3ec80001fd92c4')}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d1792324741...>}}
+MONGODB | db:27017 req:17 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:18 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"NEGATIVADO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d1792324741...>}}
+MONGODB | db:27017 req:18 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 8ms (Views: 0.5ms | MongoDB: 0.0ms | Allocations: 1718)
+
+
+MONGODB | db:27017 req:10 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47294759961680 type=uuid data=0x67b3da2468494bfe...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:10 | admin.endSessions | SUCCEEDED | 0.000s
+MONGODB | db:27017 req:20 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47012730198980 type=uuid data=0x5d1e4d1792324741...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:20 | admin.endSessions | SUCCEEDED | 0.000s
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:10:38 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"123", "phone"=>"(34) 123123", "client"=>{"document"=>"123", "phone"=>"(34) 123123"}}
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"123", "phone"=>"(34) 123123"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:8 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"123", "phone"=>"(34) 123123"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}...
+MONGODB | db:27017 req:8 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:9 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"123", "phone"=>"(34) 123123"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}...
+MONGODB | db:27017 req:9 | credito_express_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 23ms (Views: 1.4ms | MongoDB: 0.0ms | Allocations: 4069)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 22:10:41 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>36, "fee"=>{}}
+MONGODB | db:27017 req:10 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"_id"=>BSON::ObjectId('60302c56db3ec80001fd92c4')}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:10 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:11 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"NEGATIVADO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:11 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 8ms (Views: 0.3ms | MongoDB: 0.0ms | Allocations: 1792)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:11:09 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-00633", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}}
+MONGODB | db:27017 req:12 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:12 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 404 Not Found in 4ms (Views: 0.3ms | MongoDB: 0.0ms | Allocations: 897)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:12:01 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-00633", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}}
+MONGODB | db:27017 req:13 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-00633"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:13 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 404 Not Found in 4ms (Views: 0.6ms | MongoDB: 0.0ms | Allocations: 988)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:12:06 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:14 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:14 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:15 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a...
+MONGODB | db:27017 req:15 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:16 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a...
+MONGODB | db:27017 req:16 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 10ms (Views: 0.7ms | MongoDB: 0.0ms | Allocations: 2462)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 22:12:08 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>36, "fee"=>{}}
+MONGODB | db:27017 req:17 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"_id"=>BSON::ObjectId('60302c0ddb3ec80001fd92c2')}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:17 | credito_express_development.find | SUCCEEDED | 0.002s
+MONGODB | db:27017 req:18 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_ALTO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:18 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 11ms (Views: 0.3ms | MongoDB: 0.0ms | Allocations: 1758)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:12:24 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063s", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063s"}}
+MONGODB | db:27017 req:19 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063s"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:19 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 404 Not Found in 6ms (Views: 0.2ms | MongoDB: 0.0ms | Allocations: 957)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 22:12:28 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>36, "fee"=>{}}
+MONGODB | db:27017 req:20 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_BAIXO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:20 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 5ms (Views: 1.7ms | MongoDB: 0.0ms | Allocations: 921)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:12:45 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | db:27017 req:21 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:21 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:22 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a...
+MONGODB | db:27017 req:22 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:23 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a...
+MONGODB | db:27017 req:23 | credito_express_development.find | SUCCEEDED | 0.002s
+Completed 200 OK in 17ms (Views: 0.5ms | MongoDB: 0.0ms | Allocations: 2428)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 22:12:46 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>36, "fee"=>{}}
+MONGODB | db:27017 req:24 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"_id"=>BSON::ObjectId('60302c0ddb3ec80001fd92c2')}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:24 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:25 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_ALTO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}}
+MONGODB | db:27017 req:25 | credito_express_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 10ms (Views: 0.3ms | MongoDB: 0.0ms | Allocations: 1719)
+
+
+MONGODB | db:27017 req:27 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47026595058780 type=uuid data=0xf0060a798a414160...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:27 | admin.endSessions | SUCCEEDED | 0.000s
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:14:07 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"39966628827", "phone"=>"(34) 99267-0063", "client"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}}
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47114003956520 type=uuid data=0x6b9a807e7b254ec0...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.000s
+MONGODB | db:27017 req:8 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47114003956520 type=uuid data=0x6b9a807e7b...
+MONGODB | db:27017 req:8 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:9 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"39966628827", "phone"=>"(34) 99267-0063"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47114003956520 type=uuid data=0x6b9a807e7b...
+MONGODB | db:27017 req:9 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 15ms (Views: 0.9ms | MongoDB: 0.0ms | Allocations: 4067)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 22:14:09 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>36, "fee"=>{}}
+MONGODB | db:27017 req:10 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"_id"=>BSON::ObjectId('60302c0ddb3ec80001fd92c2')}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47114003956520 type=uuid data=0x6b9a807e7b254ec0...>}}
+MONGODB | db:27017 req:10 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:11 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_ALTO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47114003956520 type=uuid data=0x6b9a807e7b254ec0...>}}
+MONGODB | db:27017 req:11 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 7ms (Views: 0.6ms | MongoDB: 0.0ms | Allocations: 1794)
+
+
+MONGODB | db:27017 req:13 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47114003956520 type=uuid data=0x6b9a807e7b254ec0...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:13 | admin.endSessions | SUCCEEDED | 0.000s
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 22:14:18 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>36, "fee"=>{}}
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server db:27017 initializing.
+MONGODB | Waiting for up to 30.00 seconds for servers to be scanned: #<Cluster topology=Unknown[db:27017] servers=[#<Server address=db:27017 UNKNOWN>]>
+MONGODB | Server description for db:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | db:27017 req:7 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"_id"=>BSON::ObjectId('60302c0ddb3ec80001fd92c2')}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47357272080980 type=uuid data=0x5655818fa8d045b3...>}}
+MONGODB | db:27017 req:7 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:8 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_ALTO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47357272080980 type=uuid data=0x5655818fa8d045b3...>}}
+MONGODB | db:27017 req:8 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 19ms (Views: 0.4ms | MongoDB: 0.0ms | Allocations: 6689)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 22:14:23 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>36, "fee"=>{}}
+MONGODB | db:27017 req:9 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"_id"=>BSON::ObjectId('60302c0ddb3ec80001fd92c2')}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47357272080980 type=uuid data=0x5655818fa8d045b3...>}}
+MONGODB | db:27017 req:9 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:10 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"SCORE_ALTO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47357272080980 type=uuid data=0x5655818fa8d045b3...>}}
+MONGODB | db:27017 req:10 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 6ms (Views: 0.6ms | MongoDB: 0.0ms | Allocations: 1733)
+
+
+Started POST "/clients/identify" for 172.23.0.1 at 2021-02-19 22:14:55 +0000
+Processing by ClientsController#identify as */*
+  Parameters: {"document"=>"123", "phone"=>"(34) 123123", "client"=>{"document"=>"123", "phone"=>"(34) 123123"}}
+MONGODB | db:27017 req:11 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"123", "phone"=>"(34) 123123"}, "projection"=>{"_id"=>1}, "limit"=>1, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47357272080980 type=uuid data=0x5655818fa8d045b3...>}}
+MONGODB | db:27017 req:11 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:12 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"123", "phone"=>"(34) 123123"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47357272080980 type=uuid data=0x5655818fa8d045b3...>}}...
+MONGODB | db:27017 req:12 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:13 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"document"=>"123", "phone"=>"(34) 123123"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47357272080980 type=uuid data=0x5655818fa8d045b3...>}}...
+MONGODB | db:27017 req:13 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 9ms (Views: 0.5ms | MongoDB: 0.0ms | Allocations: 2491)
+
+
+Started POST "/fees/simulate" for 172.23.0.1 at 2021-02-19 22:14:58 +0000
+Processing by FeesController#simulate as */*
+  Parameters: {"value"=>1000, "plots"=>36, "fee"=>{}}
+MONGODB | db:27017 req:14 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"clients", "filter"=>{"_id"=>BSON::ObjectId('60302c56db3ec80001fd92c4')}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47357272080980 type=uuid data=0x5655818fa8d045b3...>}}
+MONGODB | db:27017 req:14 | credito_express_development.find | SUCCEEDED | 0.001s
+MONGODB | db:27017 req:15 conn:1:1 | credito_express_development.find | STARTED | {"find"=>"fees", "filter"=>{"kind"=>"NEGATIVADO"}, "$db"=>"credito_express_development", "lsid"=>{"id"=><BSON::Binary:0x47357272080980 type=uuid data=0x5655818fa8d045b3...>}}
+MONGODB | db:27017 req:15 | credito_express_development.find | SUCCEEDED | 0.001s
+Completed 200 OK in 7ms (Views: 0.4ms | MongoDB: 0.0ms | Allocations: 1718)
+
+
+MONGODB | db:27017 req:17 conn:1:2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47357272080980 type=uuid data=0x5655818fa8d045b3...>}], "$db"=>"admin"}
+MONGODB | db:27017 req:17 | admin.endSessions | SUCCEEDED | 0.000s

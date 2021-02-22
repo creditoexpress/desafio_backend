@@ -1,6 +1,6 @@
 ## BACKEND PROJECT:
 
-Implamentation of two APIs. First clientAPI, check whether a cliente is currently register in the database. Second calcAPI returns a loan information rate along with the costs, based on their credit score.
+Implementation of two APIs. First clientAPI checks whether a cliente is currently registered in the database. Second calcAPI returns a loan information rate request along with all the costs based on their credit score.
 
 ## Technology used:
 Python - Django in backend
@@ -14,19 +14,26 @@ localhost:8000
 0.0.0.0:8000
 
 ## clienteAPI
+Endpoint = http://127.0.0.1:8000/clientes/api/v1/
+
+How it works:
 url = http://127.0.0.1:8000/clientes/api/v1/(cpf - celular)
 
-exemplo: http://127.0.0.1:8000/clientes/api/v1/01437256961-21981986733
+example: http://127.0.0.1:8000/clientes/api/v1/01437256961-21981986733
 
 
 
 ## calcAPI
+Endpoint = http://127.0.0.1:8000/taxas/api/v1/
 
+How it works:
 url = http://127.0.0.1:8000/taxas/api/v1/(id)/(parcelas-valor)
 
 exemplo: http://127.0.0.1:8000/taxas/api/v1/50000/12-1000/
 
-code ex: 
+
+
+## Example code: 
 mes = '12'
 valor = '10000'
 'http://127.0.0.1:8000/taxas/api/v1/' + id + '/' + mes + '-' + valor

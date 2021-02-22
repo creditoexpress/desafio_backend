@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+{% load expressFilters %}
+
+{% block content %}
+<div class="container">
+<div class="row">
+       
+        <div class="col-sm">
+            <div class="card card-body shadow mt-5 " style="color: #222;">
+                <h4>Faça sua escolha</h4><hr>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{form | crispy}}
+                        <button class="btn btn-info" type="submit">Simular</button>
+                    </form>           
+                
+            </div>
+        </div>
+
+
+        <div class="col-sm">
+            <div class="card card-body shadow mt-5 " style="color: #222;">
+                
+                {% if resultado %}
+                <h4>Resultado</h4><hr>
+                {% for data in resultado %}
+                <div class="row">
+                    <div class="col">
+                        <p>Valor: </p>
+                        <p>N. de Parcelas: </p>
+                        <p>Taxa de juros: </p>
+                        <p>Juros mensal: </p>
+                        <p>Juros Total: </p>
+                        <p>Custo final: </p>
+                    
+                    </div>
+                    <div class="col">
+                    <p>{{data.valor | formata_preco}}</p>
+                    <p>{{data.numeroParcelas}}</p>
+                    <p>{{data.taxaJuros}}%</p>
+                    <p>{{data.jurosMensal | formata_preco}}</p>
+                    <p>{{data.jurosTotal | formata_preco}}</p>
+                    <p>{{data.custoFinal | formata_preco}}</p>
+                    </div>
+                </div>
+
+                    {% endfor %}
+
+                {% else %}
+
+                    <h4>Nenhum resultado</h4> <hr>
+            
+                {% endif %}
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

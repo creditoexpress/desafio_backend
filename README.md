@@ -1,3 +1,18 @@
+## BACKEND PROJECT:
+
+Implamentation of two APIs. First clientAPI, check whether a cliente is currently register in the database. Second calcAPI returns a loan information rate along with the costs, based on their credit score.
+
+## Technology used:
+Python - Django in backend
+
+
+## USAGE:
+- docker-compose up (to build the project)
+
+## Testing Endpoint
+localhost:8000
+0.0.0.0:8000
+
 ## clienteAPI
 url = http://127.0.0.1:8000/clientes/api/v1/(cpf - celular)
 

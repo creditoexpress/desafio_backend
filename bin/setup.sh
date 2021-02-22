@@ -1,7 +1,8 @@
+# Create env files helper function
 create_env_file () {
-    [ ! -f ./.env.database ] \
-    && cp .env.database.example .env.database \
-    || echo "$1 already exists."
+    [ ! -f ./$1 ] \
+    && cp $1.example $1 && echo "File [ $1 ] successfully created!"  \
+    || echo "File [ $1 ] already exists."
 }
 
 # Creates dotenv file

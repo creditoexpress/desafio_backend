@@ -16,7 +16,7 @@ localhost:8000
 ## clienteAPI
 Endpoint = http://127.0.0.1:8000/clientes/api/v1/
 
-How it works:
+How it works:  
 url = http://127.0.0.1:8000/clientes/api/v1/(cpf - celular)
 
 example: http://127.0.0.1:8000/clientes/api/v1/01437256961-21981986733
@@ -26,10 +26,10 @@ example: http://127.0.0.1:8000/clientes/api/v1/01437256961-21981986733
 ## calcAPI
 Endpoint = http://127.0.0.1:8000/taxas/api/v1/
 
-How it works:
+How it works:  
 url = http://127.0.0.1:8000/taxas/api/v1/(id)/(parcelas-valor)
 
-exemplo: http://127.0.0.1:8000/taxas/api/v1/50000/12-1000/
+example: http://127.0.0.1:8000/taxas/api/v1/50000/12-1000/
 
 
 

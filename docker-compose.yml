@@ -1,0 +1,58 @@
+version: '3.7'
+services:
+  db:
+    # Como não temos tarefas específicas na imagem, especificamos uma imagem
+    # pronta ao invés de referenciar um Dockerfile
+    image: mongo:3.6
+    restart: always
+    networks:
+      - default
+      - credito_express
+  web:
+    # Especifica onde está o Dockerfile e onde será a pasta atual onde ele vai
+    # rodar (.). Passa parâmetros para o build da imagem
+    build:
+      context: .
+      args:
+        - "BUILD_RAILS_ENV=development/test"
+    # Define um script a ser executado na inicialização do container. Vide
+    # documentação do docker-compose, quando entrypoint é definido, tanto o
+    # ENTRYPOINT como o CMD definidos no dockerfile são sobreescritos (por isso
+    # é necessário especificar command também)
+    # Ref: https://docs.docker.com/compose/compose-file/#entrypoint
+    # entrypoint: /credito_express/entrypoint.sh
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    # Monta o diretório atual . dentro de /solvis_notifications do container. Isto significa
+    # que o conteúdo da pasta /solvis_notifications no container será sobreescrito pelo código
+    # da aplicacão fora do container, o que possibilita alterar o código e ver
+    # a diferenca na hora na aplicacão
+    volumes:
+      - .:/credito_express
+    # Mapeia porta 3009 do da máquina para a 3009 do container
+    ports:
+      - "3000:3000"
+    # Ao subir o container web, ele sobre o db automaticamente
+    depends_on:
+      - db
+    # Variáveis usadas no Dockerfile
+    environment:
+      PORT: 3000
+    # para funcionar debugger
+    tty: true
+    stdin_open: true
+    # cria um registro no arquivo /etc/hosts do container, serve como um DNS
+    # onde damos um nome para o ip da máquina no docker
+    extra_hosts:
+      - "localmachine:192.168.10.1"
+    # Além da rede default, se conecta à rede solvis_default em development
+    networks:
+      - default
+      - credito_express
+
+networks:
+  solvis_default:
+    name: credito_express
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.10.0/24

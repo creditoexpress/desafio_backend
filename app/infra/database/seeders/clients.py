@@ -9,7 +9,7 @@ def parse_seed_file():
         parsed_seeds.append({
             "name": client['nome'],
             "cpf":  client['cpf'],
-            "celphone": client['celular'],
+            "cellphone": client['celular'],
             "score": client['score'],
             "negative": client['negativado']
         })

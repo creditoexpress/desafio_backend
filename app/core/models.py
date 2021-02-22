@@ -8,7 +8,7 @@ class Client(BaseModel):
     id: str = Field(default_factory=uuid4, alias='_id')
     name: str
     cpf: str
-    celphone: str
+    cellphone: str
     score: int = Field(..., gt=0, lt=1000)
     negative: bool
 
@@ -17,7 +17,7 @@ class Client(BaseModel):
             "example": {
                 "name": "Roberto Filipe Figueiredo",
                 "cpf": "41882728564",
-                "celphone": "6526332774",
+                "cellphone": "6526332774",
                 "score": 300,
                 "negative": False,
             }

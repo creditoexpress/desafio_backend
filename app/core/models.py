@@ -3,7 +3,6 @@ from pydantic import BaseModel, Field
 from uuid import uuid4
 
 
-# TODO: test if this does not create an add database called FeeByPortions
 class Client(BaseModel):
     id: str = Field(default_factory=uuid4, alias='_id')
     name: str

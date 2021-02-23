@@ -4,7 +4,6 @@ from jwt.exceptions import InvalidSignatureError, ExpiredSignatureError, DecodeE
 
 from ..app_factory import create_app
 from ...auth.services import authenticate
-from ...auth.exceptions import ClientNotFound
 
 
 FIRST = 0
@@ -23,16 +22,15 @@ def extract_token(authorization: str) -> str:
 async def authenticate_user(request: Request, call_next):
     try:
         token = extract_token(authorization=request.headers.get('authorization'))
-        print(token)
         if not token:
             return JSONResponse(status_code=status.HTTP_401_UNAUTHORIZED, content='Auth token is required')
 
-        clients_repository = request.app.ctx.ioc.get('clients_repository')
-        await authenticate(clients_repository, token)
+        cpf = await authenticate(token)
 
+        request.scope['client_cpf'] = cpf
         response = await call_next(request)
         return response
-    except (InvalidSignatureError, ClientNotFound, DecodeError) as ex:
+    except (InvalidSignatureError, DecodeError) as ex:
         return JSONResponse(status_code=status.HTTP_401_UNAUTHORIZED, content='Invalid auth token')
     except ExpiredSignatureError as ex:
         return JSONResponse(

@@ -7,4 +7,4 @@ app = create_app()
 
 app.include_router(auth_api)
 
-app.mount('/simulations', simulation_api)
+app.mount('/simulate', simulation_api)

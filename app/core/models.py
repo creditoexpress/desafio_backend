@@ -46,3 +46,16 @@ class Fee(BaseModel):
                 "fee_type": "NEGATIVADO",
             }
         }
+
+
+class Simulation(BaseModel):
+    value: float
+    portions: int
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "value": 10000,
+                "portions": 6
+            }
+        }

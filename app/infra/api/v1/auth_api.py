@@ -24,8 +24,6 @@ async def login(request: Request, user: User = Body(...)):
         clients_repository = request.app.ctx.ioc.get('clients_repository')
         token = await login_user(clients_repository, user=user)
         return JSONResponse(status_code=status.HTTP_200_OK, content={ 'token': token })
-    except ClientNotFound as ex:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Client not found')
     except Unauthorized as ex:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Cpf and cellphone pair are invalid')
     except Exception as ex:

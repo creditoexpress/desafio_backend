@@ -12,6 +12,7 @@ python-dotenv = "^0.15.0"
 uvicorn = "^0.13.4"
 motor = "^2.3.1"
 PyJWT = "^2.0.1"
+http3 = "^0.6.7"
 
 [tool.poetry.dev-dependencies]
 

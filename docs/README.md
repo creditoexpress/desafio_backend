@@ -51,3 +51,20 @@ $ docker-compose up -d
 ```
 
 That will initiate the services database and apis.
+
+## Run tests using insomnia
+
+The scenarios of test are all covered, but so far I have not made integration nor unitary tests.
+To at least help with that, there is a file called `Insomnia_2021_02_22` in the root of the project,
+which can be imported and execute the requests.
+
+## Built with
+
+- [FastAPI]() - Web Framework
+- [Motor]() - Async MongoDB Client
+- [Dotenv]() - Env files loader
+- [Docker]() - Virtualizer of containers
+- [Docker-Compose]() - Containers manager
+- [Shell Script]() - To create scripts for tasks automation
+- [Makefile]() - To help with tasks execution like seeding the database or bootstraping the dev environment
+- [Poetry]() - Dependency manager and scripts helper somewhat cli alike

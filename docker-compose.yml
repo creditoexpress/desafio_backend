@@ -1,18 +1,18 @@
 version: '3'
 
 services:
-  #apis:
-  #  build: .
-  #  container_name: apis
-  #  env_file: .env
-  #  ports:
-  #    - '5000:5000'
-  #  depends_on:
-  #    - db
-  #  links:
-  #    - db
-  #  networks:
-  #    - apis-db-network
+  apis:
+    build: .
+    container_name: apis
+    env_file: .env
+    ports:
+      - '5000:5000'
+    depends_on:
+      - db
+    links:
+      - db
+    networks:
+      - apis-db-network
 
   db:
     image: mongo

@@ -25,7 +25,8 @@ async def authenticate_user(request: Request, call_next):
         if not token:
             return JSONResponse(status_code=status.HTTP_401_UNAUTHORIZED, content='Auth token is required')
 
-        cpf = await authenticate(token)
+        jwt_secret = request.app.ctx.ioc.get('jwt_secret')
+        cpf = await authenticate(token=token, jwt_secret=jwt_secret)
 
         request.scope['client_cpf'] = cpf
         response = await call_next(request)

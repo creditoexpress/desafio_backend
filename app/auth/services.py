@@ -7,7 +7,7 @@ from .models import User
 from .exceptions import Unauthorized
 
 
-async def login(clients_repository: ClientsRepository, user: User):
+async def login(clients_repository: ClientsRepository, user: User, jwt_secret: str):
     client = await clients_repository.find_by_cpf(cpf=user.cpf)
 
     if client and user.cellphone != client['cellphone']:
@@ -19,10 +19,10 @@ async def login(clients_repository: ClientsRepository, user: User):
         "iss": user.cpf,
         "exp": now + timedelta(days=1)
     }
-    return jwt.encode(token_payload, 'secret', algorithm='HS256')
+    return jwt.encode(token_payload, jwt_secret, algorithm='HS256')
 
 
-async def authenticate(token: str):
-    decoded = jwt.decode(token, 'secret', algorithms=['HS256'])
+async def authenticate(token: str, jwt_secret: str):
+    decoded = jwt.decode(token, jwt_secret, algorithms=['HS256'])
     cpf = decoded['iss']
     return cpf

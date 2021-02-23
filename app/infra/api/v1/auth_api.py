@@ -21,8 +21,9 @@ router = APIRouter(prefix='/auth')
 )
 async def login(request: Request, user: User = Body(...)):
     try:
+        jwt_secret = request.app.ctx.ioc.get('jwt_secret')
         clients_repository = request.app.ctx.ioc.get('clients_repository')
-        token = await login_user(clients_repository, user=user)
+        token = await login_user(clients_repository, user=user, jwt_secret=jwt_secret)
         return JSONResponse(status_code=status.HTTP_200_OK, content={ 'token': token })
     except Unauthorized as ex:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Cpf and cellphone pair are invalid')

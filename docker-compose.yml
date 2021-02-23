@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  apis:
+    build: .
+    container_name: apis
+    env_file: .env
+    ports:
+      - '5000:5000'
+    depends_on:
+      - db
+    links:
+      - db
+    networks:
+      - apis-db-network
+
+  db:
+    image: mongo
+    container_name: db
+    env_file: .env.database
+    ports:
+      - '27017:27017'
+    volumes:
+      - db_data:/data/db
+    networks:
+      - apis-db-network
+
+volumes:
+  db_data: {}
+
+networks:
+  apis-db-network:
+    driver: bridge

@@ -1,0 +1,13 @@
+# Notes file
+notes
+
+# dotenv files
+.env
+.env.database
+.env.development
+
+# bin python files
+__pycache__
+
+# Virtualenv
+.venv

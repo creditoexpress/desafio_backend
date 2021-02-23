@@ -29,10 +29,24 @@ That will :
 4. Download poetry package manager
 5. Add it to your cli
 
+After this, you'll need to restart the shell so that the `poetry` cli will be available. Then, just fill the `.env` file as the example below with your database info:
+
 This setup was done in a linux OS, so in windows or MAC it might differ, however, in case you are interested in reproducing those steps by hand, you can do so by:
 
 1. Executing the `.env` file instructions right above
 2. Installing and activating poetry in your shell terminal (not necessary if you'll not use the seeders)
+
+> .env.database (file example)
+> ```bash
+> MONGO_INITDB_ROOT_USERNAME=YOUR_DB_USER
+> MONGO_INITDB_ROOT_PASSWORD=YOUR_DB_PASSWORD
+> ```
+
+> .env (file example)
+> ```bash
+> DB_NAME=YOUR_DATABASE_NAME
+> DB_URL=mongodb://YOUR_DB_USER:YOUR_DB_PASSWORD@db:27017
+> ```
 
 After that, to install the dependencies you must execute the command below
 

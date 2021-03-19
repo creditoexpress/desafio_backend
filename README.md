@@ -69,3 +69,6 @@ curl --request POST \
 
 - Faça um "fork" deste repositório na sua conta do Github;
 - Após completar o desafio, crie um pull request nesse repositório comparando a sua branch com a master com o seu nome no título;
+
+## Helps
+- https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/

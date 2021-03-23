@@ -1,71 +1,72 @@
-## Sobre a Crédito Express
+## Sobre a solução
 
-A Crédito Express é uma fintech voltada para servir instituições financeiras. Nosso objetivo é levar TAXAS ATRATIVAS para as pessoas, a partir do uso de tecnologia de ponta.
+Solução desenvolvida em python com Flask e mongodb. Aplicando conceitos SOLID e boas praticas de desenvolvimento para manter uma boa estrutura e um codigo limpo.
+Além disso também aplicado alguns conceitos como Decorators, upload de arquivos, docker e ORM.
 
-VENHA FAZER PARTE DESSA REVOLUÇÃO FINANCEIRA!
+## Como Rodar
 
-
-## Sobre o desafio
-
-Com o aumento dos casos de COVID-19 muitos cidadãos tiveram aumentos nos gastos e redução nos ganhos, levando a eles endividarem-se em meios que as taxas de juros são extremamente altas. Neste desafio você deve construir uma aplicação para pessoas possam simular empréstimos com as melhores taxas do mercado financeiro.
-
-A aplicação deve ter uma API para o cliente informar o seu CPF e numero de celular para se identificar e depois disso ele poderá efetuar simulações de empréstimo em outra API. Para simular é necessário informar o valor do empréstimo e o número de parcelas, sendo que podem ser 6, 12, 18, 24 ou 36.
-
-Existe uma tabela de taxas, o calculo do empréstimo deve ser feito de acordo com ela. Existem 3 tipos diferentes de taxas: **negativado, score alto e score baixo**. Pessoas com score acima de 500 são consideradas com score alto nessa aplicação, pessoas sem cadastro na base recebem score 0.
-
-Após obter o valor da taxa a ser aplicada para esse cliente, será necessário chamar uma API para fazer o cálculo da simulação. Os dados retornados pelo cálculo devem ser o retorno da sua API.
-
-
-## Considerações
-
-- O arquivo taxas.json possui uma coleção de taxas por característica. Os dados seguem o formato do exemplo abaixo, mas pode modificar a estrutura no seu projeto se precisar:
-
-```javascript
-  {
-	"tipo": "NEGATIVADO",
-	"taxas": {"6": 0.04, "12": 0.045, "18": 0.05, "24": 0.053, "36": 0.055}
-  }
+Para rodar e subir a aplicação execute o seguinte comando na pasta raiz do projeto:
+```shell
+docker-compose up -d
 ```
-- O arquivo clientes.json possui uma coleção de objetos que representam os clientes que já tem pré-cadastro. Abaixo temos um exemplo do formato do objeto que também pode ter a estrutura modificada caso julgue necessário.
+Desta forma, estará rodando os container responsáveis pela API e pelo banco de dados da aplicação.
+Obs: o banco de dados estará vazio e precisará ser preenchido.
 
+# Utilizando
+## Preenchendo o banco 
+- Primeiramente é necessario preencher o banco de dados por meio dos arquivos fornecidos na pasta dados.
+Para isso há duas rotas, uma para as taxas e outra para os usuarios.
+### Usuarios
+- Rota: [POST] http://0.0.0.0:3333/user/insert-file
+- Inserir como corpo da requisição o arquivo "clientes.json" com o nome da key como "file"
+
+### Taxas
+- Rota: [POST] http://0.0.0.0:3333/taxa/insert-file
+- Inserir como corpo da requisição o arquivo "taxas.json" com o nome da key como "file"
+
+## Plano B
+- Caso não obtenha sucesso em preencher o banco com os arquivos, também é possivel preenche-los informando o array de JSON manualmente no BODY da request. Da seguinte forma:
+### Usuarios
+- Rota: [POST] http://0.0.0.0:3333/user/insert
+- Inserir como corpo da requisição o conteudo do arquivo "clientes.json".
+
+### Taxas
+- Rota: [POST] http://0.0.0.0:3333/taxa/insert
+- Inserir como corpo da requisição o conteudo do arquivo "taxas.json".
+
+## Rotas
+- Algumas rotas possivéis da API
+
+### Login
+- Rota: [GET] http://0.0.0.0:3333/user/login
+- Corpo: Informar no corpo da requisição um JSON contendo o **cpf** e o **celular** de algum usuario cadastrado anteriormente. Ex:
 ```javascript
 {
-	"nome": "Roberto Filipe Figueiredo",
-	"cpf": "41882728564",
-	"celular": "6526332774",
-	"score": 300,
-	"negativado": false
+    "cpf":"42935087160",
+    "celular":"41996268329"
 }
 ```
+- Retorno: Retornará um Token JWT possibilitando a simulação de emprestimo.
+- **Obs:** Caso não haja usuario cadastrado com esses dados será retornado Um Token JWT correspondente a um Usuario Visitante.
 
-- Abaixo temos um exemplo de um CURL para API de cálculo.
-
-```shell
-curl --request POST \
-  --url https://us-central1-creditoexpress-dev.cloudfunctions.net/teste-backend \
-  --header 'Content-Type: application/json' \
-  --data '{
-	"numeroParcelas": 12,
-	"valor": 10000,
-	"taxaJuros": 0.04
-}'
+### Simular Emprestimo
+- Rota: [GET] http://0.0.0.0:3333/simulacao_emprestimo/simular
+- Header: Deve conter um Header **Authorization** contendo o Token JWT retornado na request de Login.
+- Corpo:  Informar no corpo da requisição um JSON contendo o valores de **valor** e o **numeroParcelas** que serão usados pra simular o empréstimo. Ex:
+```javascript
+{
+    "valor": 10000,
+    "numeroParcelas": 12
+}
+``` 
+- Retorno: Retornará um JSON contendo o resultado da simulaçao do Emprestimo. Ex:
+```javascript
+{
+    "numeroParcelas": 12,
+    "outrasTaxas": 85,
+    "total": 10335.0,
+    "valorJuros": 250.0,
+    "valorParcela": 861.25,
+    "valorSolicitado": 10000
+}
 ```
-
-### Pré-requisitos
-- Desenvolvimento de API REST em Python;
-- Utilização do MongoDB;
-- Desenvolvimento de um Dockerfile/Docker-Compose.yml para rodar o projeto;
-- Documentar como rodamos o projeto no README.MD;
-
-### Diferenciais/Extras
-- Implementação de Testes de unidade e/ou integração;
-- Clean code;
-- Segurança e resiliência;
-- Utilização de padrões de projeto;
-- Migrations e/ou seeders;
-- Script para execução da aplicação;
-
-## Pronto para começar o desafio?
-
-- Faça um "fork" deste repositório na sua conta do Github;
-- Após completar o desafio, crie um pull request nesse repositório comparando a sua branch com a master com o seu nome no título;

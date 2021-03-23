@@ -1,0 +1,20 @@
+app:
+	build: .
+	command: python -u app.py
+	ports:
+		- "5000:5000"
+	volumes:
+		- .:/app
+	links:
+		- db
+db:
+	image: mongo:latest
+	hostname: mongo_db
+	environment:
+		- MONGO_INITDB_DATABASE=desafio
+		- MONGO_INITDB_ROOT_USERNAME=mateuskb 
+		- MONGO_INITDB_ROOT_PASSWORD=desafio2021
+	volumes:
+		- ./init-db.js:/docker-entrypoint-initdb.d/init-db.js:ro
+	ports:
+		- 27017:27017

@@ -5,12 +5,12 @@ Além disso também aplicado alguns conceitos como Decorators, upload de arquivo
 
 ## Como Rodar
 
-Para rodar subir a aplicação execute o seguinte comando na pasta raiz do projeto:
+Para rodar e subir a aplicação execute o seguinte comando na pasta raiz do projeto:
 ```shell
 docker-compose up -d
 ```
-Desta forma, estará rodando os container resposáveis pela API e pelo banco de dados da aplicação.
-Obs: o banco de dados estará vazio e precisa ser preenchido.
+Desta forma, estará rodando os container responsáveis pela API e pelo banco de dados da aplicação.
+Obs: o banco de dados estará vazio e precisará ser preenchido.
 
 # Utilizando
 ## Preenchendo o banco 

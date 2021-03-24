@@ -3,7 +3,7 @@ from flask import Response, request, jsonify
 from flask_restful import Resource
 
 # project resources
-from models.clients import Clients
+from models.clients import Client
 
 
 # @app.route('/clients/<cpf>&<cel>', methods=['GET'])

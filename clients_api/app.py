@@ -5,25 +5,26 @@ from decouple import config
 
 from api.routes import create_routes
 
-# from tools.load_data import seeders
+from tools.load_data import seeders
 
-# import os
+import os
 
 ### Path criado para ser acessado em outros files
-# ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 ### Default MongoDB Configuration
 default_config = {
     'MONGODB_SETTINGS': {
         'db': 'desafio_bd',
-        'host': 'desafio_bd',
-        'port': 27018,
+        'host': 'localhost',
+        'port': 27017,
         'username': config("MONGODB_USERNAME"),
         'password': config("MONGODB_PASSWORD"),
         'authentication_source': 'admin'
-    }
+    },
+    'ENV': 'development',
+    'DEBUG': 'True'
 }
-
 
 def get_flask_app(config: dict = None) -> app.Flask:
     """
@@ -44,18 +45,16 @@ def get_flask_app(config: dict = None) -> app.Flask:
     create_routes(api=api)
 
     # init mongoengine
+    ### db.app.config['MONGODB_SETTINGS']['db']
     db = MongoEngine(app=flask_app)
 
-    # seeders(db, ROOT_DIR)
-
+    # Alimenta banco 
+    seeders(ROOT_DIR)
 
     return flask_app
 
 if __name__ == '__main__':
     # Main entry point when run in stand-alone mode.
     app = get_flask_app()
-
-    # print(app.instance_path)
-    # print(app.root_path)
 
     app.run(debug=True)

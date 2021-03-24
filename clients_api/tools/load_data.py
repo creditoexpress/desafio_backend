@@ -1,15 +1,19 @@
-# from models.clients import Clients
-# import json
+from models.clients import Client
+import pymongo
+import json
 
 
-# def seeders(db, root_dir):
+def seeders(root_dir):
 
-#     print(db)
+    f = open(root_dir + "/resources/clients.json")
 
-#     f = open(root_dir + "/resources/clientes_data.json")
+    data = json.load(f)
+    clients_instances = [Client(**infos) for infos in data]
 
-#     data = json.load(f)
-#     # print(data[0:100])
+    clients = Client.objects()
 
-#     return True
+    if not(clients):
+        Client.objects.insert(clients_instances, load_bulk=False)
+
+    return True
 

@@ -20,14 +20,14 @@ class ClientApi(Resource):
     
     def get(self):
         # cpf = request.json['cpf']
-        # cel = request.json['cel']
+        # celular = request.json['celular']
 
         request_data = request.args.to_dict()
 
         cpf = int(request_data['cpf'])
-        cel = int(request_data['cel'])
+        celular = int(request_data['celular'])
 
-        client = Client.objects.get(cpf=cpf, celular=cel)
+        client = Client.objects.get(cpf=cpf, celular=celular)
 
         client_data = client._data
 

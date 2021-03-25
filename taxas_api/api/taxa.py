@@ -19,10 +19,16 @@ class TaxasApi(Resource):
 class TaxaApi(Resource):
     
     def get(self):
-        score = request.json['score']
-        negativado = request.json['negativado']
-        parcela = request.json['parcela']
+        # score = request.json['score']
+        # negativado = request.json['negativado']
+        # parcela = request.json['parcela']
 
+        request_data = request.args.to_dict()
+
+        score = int(request_data['score'])
+        negativado = request_data['negativado']
+        parcela = request_data['parcela']
+        
         if negativado:
             tipo = "NEGATIVADO"
         else:

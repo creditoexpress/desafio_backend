@@ -21,13 +21,13 @@ class TaxaApi(Resource):
     def get(self):
         # score = request.json['score']
         # negativado = request.json['negativado']
-        # parcela = request.json['parcela']
+        # parcelas = request.json['parcelas']
 
         request_data = request.args.to_dict()
 
         score = int(request_data['score'])
         negativado = request_data['negativado']
-        parcela = request_data['parcela']
+        parcelas = request_data['parcelas']
         
         if negativado:
             tipo = "NEGATIVADO"
@@ -41,7 +41,7 @@ class TaxaApi(Resource):
 
         taxa_data = taxa._data
 
-        taxa = taxa_data['taxas'].pop(parcela)
+        taxa = taxa_data['taxas'].pop(parcelas)
 
         response = jsonify({
             'message': 'success',

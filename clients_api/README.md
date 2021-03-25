@@ -1,4 +1,4 @@
-Passo a Passo
+Passo a Passo para aplicação fora do Container
 
 1- Criar um ambiente virtual
 	python3 -m venv .venv

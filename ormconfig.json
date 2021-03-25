@@ -1,0 +1,13 @@
+[
+    {
+      "name": "mongo",
+      "type": "mongodb",
+      "host": "localhost",
+      "port": 27017,
+      "database": "creditExpress",
+      "useUnifiedTopology": true,
+      "entities": [
+        "./src/modules/users/infra/typeorm/schema/*.ts"
+      ]
+    }
+  ]

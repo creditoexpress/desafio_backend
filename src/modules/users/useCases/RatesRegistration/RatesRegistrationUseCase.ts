@@ -34,10 +34,6 @@ export class RatesRegistrationUseCase implements IRatesRegistrationUseCase {
       [36, 36],
     ]);
 
-    if (!installmentsMap.has(installments)) {
-      throw new AppError('Invalid Installments!');
-    }
-
     const findRate = await this.interasteRateRepository.findRate({
       type,
       installments,

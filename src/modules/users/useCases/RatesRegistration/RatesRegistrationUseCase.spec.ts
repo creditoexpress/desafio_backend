@@ -135,25 +135,6 @@ describe('Installments Registration', () => {
     await expect(response).rejects.toBeInstanceOf(AppError);
   });
 
-  it('Should throw if findRate method returns undefined', async () => {
-    const { sut, interestRateRepositoryStub } = makeSut();
-
-    const fakeRates = {
-      id: 'valid_id',
-      type: 'SCORE_BAIXO',
-      installments: 6,
-      rate: 0.04,
-    };
-
-    jest
-      .spyOn(interestRateRepositoryStub, 'findRate')
-      .mockReturnValueOnce(new Promise(resolve => resolve(undefined)));
-
-    const response = sut.execute(fakeRates);
-
-    await expect(response).rejects.toBeInstanceOf(AppError);
-  });
-
   it('Should throw if duplicate installments and type', async () => {
     const { sut, interestRateRepositoryStub } = makeSut();
 

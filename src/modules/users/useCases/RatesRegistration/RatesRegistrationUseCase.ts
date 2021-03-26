@@ -40,25 +40,21 @@ export class RatesRegistrationUseCase implements IRatesRegistrationUseCase {
       rate,
     });
 
-    if (!findRate) {
-      throw new AppError('Not found! Register a new data!', 401);
-    }
-
-    const responseInstallments = findRate.installments;
-    const responseType = findRate.type;
-    const responseRate = findRate.rate;
+    const responseInstallments = findRate?.installments;
+    const responseType = findRate?.type;
+    const responseRate = findRate?.rate;
 
     if (
-      installmentsMap.has(responseInstallments) &&
-      typeMap.has(responseType) &&
+      installmentsMap.has(responseInstallments as number) &&
+      typeMap.has(responseType as string) &&
       responseRate === rate
     ) {
       throw new AppError('Register already exists!');
     }
 
     if (
-      installmentsMap.has(responseInstallments) &&
-      typeMap.has(responseType)
+      installmentsMap.has(responseInstallments as number) &&
+      typeMap.has(responseType as string)
     ) {
       throw new AppError('Installments and Type already register!');
     }

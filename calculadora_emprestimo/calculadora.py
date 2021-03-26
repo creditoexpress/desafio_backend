@@ -1,67 +1,126 @@
 import requests
+import os
+
+def clear(): os.system('clear')
 
 def main():
-    print("###############################################")
-    print("########## Calculadora de Empréstimo ##########")
-    print("###############################################")
 
-    print("\n\n")
+    while True:
 
-    cpf_teste = "93762814031"
-    celular_teste = "71935228778"
+        clear()
 
-    print("     Identifique-se")
-    cpf = input(" CPF: ")
-    celular = input(" CELULAR: ")
+        while True:
 
-    request_url = "http://127.0.0.1:5002/client"
-    request_body = {
-        "cpf": cpf_teste,
-        "celular": celular_teste
-    }
+            print("###############################################")
+            print("########## Calculadora de Empréstimo ##########")
+            print("###############################################")
 
-    response = requests.get(request_url, request_body)
-    print(response)
-    response_data = response.json()
+            print("\n")
 
-    nome = response_data["nome"]
-    cpf = response_data["cpf"]
-    celular = response_data["celular"]
-    score = response_data["score"]
-    negativado = response_data["negativado"]
+            print("ctrl+c para encerrar programa.")
 
-    valor_teste = 10000
-    parcelas_teste = 18
+            print("\n")
 
-    valor = input(" Valor desejado: ")
-    parcelas = input(" Nº de Parcelas (6, 12, 18, 24 ou 36): ")
+            # cpf_teste = "93762814031"
+            # celular_teste = "71935228778"
 
-    request_url = "http://127.0.0.1:5003/taxa"
-    request_body = {
-        "score": score,
-        "negativado": negativado,
-        "parcelas": parcelas_teste
-    }
+            print("     Identifique-se")
+            
+            try:
+                cpf = int(input(" CPF (Somente Números): "))
+            except ValueError:
+                print("\n Insira somente números")
+                input("\n Press Enter to continue...")
+                break
+            try:
+                celular = int(input(" Celular (Somente Números): "))
+            except ValueError:
+                print("\n Insira somente números")
+                input("\n Press Enter to continue...")
+                break
 
-    response = requests.get(request_url, request_body)
-    response_data = response.json()
+            # request_url = "http://127.0.0.1:5002/client"
+            request_url = "http://0.0.0.0:5002/client"
+            request_body = {
+                "cpf": cpf,
+                "celular": celular
+            }
 
-    taxa = response_data["taxa"]
-    print("taxa = ", taxa)
+            response = requests.get(request_url, request_body)
 
-    request_url = "http://127.0.0.1:5004/calculo"
-    request_body = {
-        "valor": valor_teste,
-        "taxa": taxa,
-        "parcelas": parcelas_teste
-    }
+            response_data = response.json()
 
-    response = requests.get(request_url, request_body)
-    response_data = response.json()
+            status_client = response_data['status']
+            if status_client == 404:
+                message_client = response_data['message']
+                print(message_client + '\n')
+                input('Press Enter to continue...')
 
-    valor_parcelas = response_data["valor_parcelas"]
-    print(valor_parcelas)
+                break
 
+            nome = response_data["nome"]
+            cpf = response_data["cpf"]
+            celular = response_data["celular"]
+            score = response_data["score"]
+            negativado = response_data["negativado"]
+
+            try:
+                valor_financiado = float(input(" Valor desejado (\" . \" para ponto flutuante): "))
+            except ValueError:
+                print("\n Insira somente números, e \" . \" para ponto flutuante.")
+                input("\n Press Enter to continue...")
+                break
+            finally:
+                if valor_financiado <= 0:
+                    print("\n Insira somente valor positivo")
+                    input("\n Press Enter to continue...")
+                    break
+            while True:
+                choices = [6, 12, 18, 24, 36]
+                parcelas = int(input(" Nº de Parcelas (opções: 6, 12, 18, 24 ou 36): "))
+                if parcelas not in choices:
+                    print('Numero de parcelas inválido. Insira novamente.')
+                else:
+                    break
+
+            request_url = "http://0.0.0.0:5003/taxa"
+            request_body = {
+                "score": score,
+                "negativado": negativado,
+                "parcelas": parcelas
+            }
+
+            response = requests.get(request_url, request_body)
+            response_data = response.json()
+
+            taxa = response_data["taxa"]
+
+            request_url = "http://0.0.0.0:5004/calculo"
+            request_body = {
+                "valor": valor_financiado,
+                "taxa": taxa,
+                "parcelas": parcelas
+            }
+
+            response = requests.get(request_url, request_body)
+            response_data = response.json()
+
+            valor_parcelas = response_data["valor_parcelas"]
+
+            clear()
+
+            print("###############################################")
+            print("################## Simulação ##################")
+            print("###############################################")
+            print('\n')
+            print("Nome: " + nome)
+            print("Nº de parcelas: ", parcelas)
+            print("Taxa de juros: ", taxa*100, "%")
+            print("Valor financiado: ", valor_financiado)
+            print("Valor da prestação: ", valor_parcelas)
+            print("\n\n")
+            input("Para fazer nova simulação, pressione enter... \nPara encerrar o programa ctrl+c.")
+            break
 
 if __name__ == "__main__":
     main()

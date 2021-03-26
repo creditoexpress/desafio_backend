@@ -1,14 +1,36 @@
-version: "3.8"
-
-services: 
-  web_client:
-    build: "./clients_api"
-    ports:
-      - "5000:5000"
-    links:
-      - desafio_bd
-  desafio_bd:
-    image: mongo:latest
-    hostname: mongodb
-    ports:
-      - '27017:27017'
+app_clients:
+  build: "./clients_api"
+  command: python -u ./clients_api/app.py
+  ports:
+    - "5002:5002"
+  volumes:
+    - .:/app
+  links:
+    - db
+app_taxas:
+  build: "./taxas_api"
+  command: python -u ./taxas_api/app.py
+  ports:
+    - "5003:5003"
+  volumes:
+    - .:/app
+  links:
+    - db
+app_calculo:
+  build: "./calculo_api"
+  command: python -u ./calculo_api/app.py
+  ports:
+    - "5004:5004"
+  volumes:
+    - .:/app
+  links:
+    - db
+db:
+  image: mongo:latest
+  hostname: desafio_mongodb
+  environment:
+    - MONGO_INITDB_DATABASE=desafio_bd
+    - MONGO_INITDB_ROOT_USERNAME=omachine
+    - MONGO_INITDB_ROOT_PASSWORD=Newlife4ever
+  ports:
+    - '27017:27017'

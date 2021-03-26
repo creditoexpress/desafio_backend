@@ -16,7 +16,7 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 default_config = {
     'MONGODB_SETTINGS': {
         'db': 'desafio_bd',
-        'host': 'localhost',
+        'host': 'desafio_mongodb',
         'port': 27017,
         'username': config("MONGODB_USERNAME"),
         'password': config("MONGODB_PASSWORD"),
@@ -57,4 +57,4 @@ if __name__ == '__main__':
     # Main entry point when run in stand-alone mode.
     app = get_flask_app()
 
-    app.run(debug=True, host='localhost', port=5003)
+    app.run(host='0.0.0.0', port=5003)

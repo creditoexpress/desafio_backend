@@ -72,3 +72,78 @@ curl --request POST \
 
 ## Helps
 - https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/
+
+FROM python:latest
+
+WORKDIR /usr/src/clients_app
+
+COPY requirements.txt ./
+
+RUN python3 -m pip install --user --no-cache-dir -r requirements.txt
+
+COPY . .
+
+CMD "python3 app.py"
+
+
+
+# For more information, please refer to https://aka.ms/vscode-docker-python
+FROM python:3.8-slim-buster
+
+EXPOSE 5002
+
+# Keeps Python from generating .pyc files in the container
+ENV PYTHONDONTWRITEBYTECODE=1
+
+# Turns off buffering for easier container logging
+ENV PYTHONUNBUFFERED=1
+
+# Install pip requirements
+COPY requirements.txt .
+RUN python -m pip install -r requirements.txt
+
+WORKDIR /app
+COPY . /app
+
+# Creates a non-root user and adds permission to access the /app folder
+# For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
+RUN useradd appuser && chown -R appuser /app
+USER appuser
+
+# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
+CMD [ "python3", "app:app", "--host=0.0.0.0:5002"]
+
+
+COMPOSE
+
+version: "3.8"
+
+services: 
+  web_client:
+    build: "./clients_api"
+    ports:
+      - "5002:5002"
+    links:
+      - desafio_bd
+  web_taxa:
+    build: "./taxas_api"
+    ports:
+      - "5003:5003"
+    links:
+      - desafio_bd
+  web_calculo:
+    build: "./calculo_api"
+    ports:
+      - "5004:5004"
+    links:
+      - desafio_bd
+  desafio_bd:
+    image: mongo:latest
+    hostname: mongodb
+    ports:
+      - '27018:27018'
+
+
+
+  volumes:
+    ./init-fb.js/docker-entrypoint-initdb.d/init-db.js:ro

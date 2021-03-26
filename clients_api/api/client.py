@@ -27,11 +27,22 @@ class ClientApi(Resource):
         cpf = int(request_data['cpf'])
         celular = int(request_data['celular'])
 
-        client = Client.objects.get(cpf=cpf, celular=celular)
+        client = Client.objects(cpf=cpf, celular=celular)
 
-        client_data = client._data
+        if client:
 
-        client_data.pop('id')
+            client = Client.objects.get(cpf=cpf, celular=celular)
+
+            client_data = client._data
+
+            client_data['status'] = 200
+
+            client_data.pop('id')
+        
+        else:
+            client_data = {}
+            client_data['status'] = 404
+            client_data['message'] = 'Cliente não encontrado.'
 
         client_dumps = json_util.dumps(client_data)
 

@@ -1,5 +1,6 @@
 import requests
 import os
+from decouple import config
 
 def clear(): os.system('clear')
 
@@ -39,8 +40,8 @@ def main():
                 input("\n Press Enter to continue...")
                 break
 
-            # request_url = "http://127.0.0.1:5002/client"
-            request_url = "http://0.0.0.0:5002/client"
+            # request_url = "http://127.0.0.1:"+ config("CALCULO_API_PORT") +"/client"
+            request_url = "http://0.0.0.0:"+ config("CLIENTS_API_PORT") +"/client"
             request_body = {
                 "cpf": cpf,
                 "celular": celular
@@ -83,7 +84,7 @@ def main():
                 else:
                     break
 
-            request_url = "http://0.0.0.0:5003/taxa"
+            request_url = "http://0.0.0.0:"+ config("TAXAS_API_PORT") +"/taxa"
             request_body = {
                 "score": score,
                 "negativado": negativado,
@@ -95,7 +96,7 @@ def main():
 
             taxa = response_data["taxa"]
 
-            request_url = "http://0.0.0.0:5004/calculo"
+            request_url = "http://0.0.0.0:"+ config("CALCULO_API_PORT") +"/calculo"
             request_body = {
                 "valor": valor_financiado,
                 "taxa": taxa,

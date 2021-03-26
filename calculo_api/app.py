@@ -52,4 +52,4 @@ if __name__ == '__main__':
     # Main entry point when run in stand-alone mode.
     app = get_flask_app()
 
-    app.run(host='0.0.0.0', port=5004)
+    app.run(host='0.0.0.0', port=config("CALCULO_API_PORT"))

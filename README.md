@@ -1,3 +1,58 @@
+## Sobre o Desafio - MARCELO MADDALON ORTIZ
+
+Consegui "finalizar", após fazer testes, às 00:34 (sexta-feira) 26/03/2021, atrasado, meu prazo era dia 25/03/2021.
+ Metas:
+  - Software Calculadora de Empréstimo: Done
+    - Não consegui encontrar tempo para desenvolver com a qualidade pretendida no início do planejamento. A ideia inicial era desenvolver uma interface para o programa utilizando algum framework, como o PyQt5
+  - As 3 API's RESTFul: Done
+    - Foi utilizado flask, nunca havia trabalhado nem estudado anteriormente. Tinha experiência com API's RESTFul utilizando django
+  - MongoDB: Done
+    - Nunca havia trabalhado nem estudado anteriormente, inclusive o NoSQL
+    - As 2 API's estão utilizando o mesmo banco ("desafio_bd"), não tenho certeza se queriam que utilizasse dois bancos diferentes
+  - Dockerfile/docker-compose: Done
+    - Existe uma observação importante sobre para executar aplicação, que será melhor detalhada na parte sobre execução
+  - Implementação de Testes: Não foi feito
+    - Nunca estudei ou utilizei
+  - Segurança e Resiliência: Acredito que possa ter diversos furos
+    - Não encontrei tempo para dedicar nesses pontos
+  - Padrões de Projeto: Não sei opinar
+    - Estudei um pouco durante o desafio para melhor compreenção, mas ficou vago
+    - Acredito que esteja faltando bastante no software calculadora_emprestimo
+  - Migrations e/ou Seeders: Done
+    - Tanto a clients_api, quanto a taxas_api possui uma função que é executada quando as API's são iniciadas, caso as referentes coleções não exista é feito o envio dos dados dos .json para o MongoDB
+  - Script para execução da aplicação: Não foi feito
+    - Nunca estudei ou utilizei
+
+## Execução
+
+Antes de executar é necessário ter instalado o docker e o docker-compose no SO
+
+1- Na raiz do projeto, onde se encontra o docker-compose criar o arquivo .env e espelhar o arquivo .env.example
+    - Inserir os dados para autenticação do MongoDB instalado
+    - Garantir que os PORT's escolhidos para cada API não esteja em uso
+    - Garantir que o PORT 27017, que é a padrão do MongoDB, não esteja em uso
+
+2- Executar o comando up para docker-compose.yml que irá criar os containers para cada API além de linka-los com o MongoDB
+    - Abrir o bash no diretório raíz, onde se encontra o docker-compose, e executar o comando abaixo
+        - $ docker-compose up
+    - Após finalizado, os servidores estarão ativados (Listening)
+
+3- Abrir o bash no diretório "/desafio_backend/calculadora_emprestimo", criar um ambiente virtual de desenvolvimento (venv), ativá-lo e instalar as bibliotecas presentes no requirements.txt
+    - Caso não tenha instalado o virtualenv, instale-o via pip
+        - $ pip install virtualenv
+    - Abra o bash no diretório "/desafio_backend/calculadora_emprestimo"
+    - Crie o ambiente virtual de desenvolvimento
+        - $ python3 -m venv .venv
+    - Ative o ambiente virtual
+        - $ source .venv/bin/activate (linux ou macOS)
+        - $ .venv/Script/activate (Windows)
+    - Instale as bibliotecas no venv
+        - $ pip install -r requirements.txt
+
+4- Executar a calculadora de empréstimo
+    - Abra o bash no diretório "/desafio_backend/calculadora_emprestimo" e execute o comando
+        - $ python3 calculadora.py
+
 ## Sobre a Crédito Express
 
 A Crédito Express é uma fintech voltada para servir instituições financeiras. Nosso objetivo é levar TAXAS ATRATIVAS para as pessoas, a partir do uso de tecnologia de ponta.
@@ -72,78 +127,3 @@ curl --request POST \
 
 ## Helps
 - https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/
-
-FROM python:latest
-
-WORKDIR /usr/src/clients_app
-
-COPY requirements.txt ./
-
-RUN python3 -m pip install --user --no-cache-dir -r requirements.txt
-
-COPY . .
-
-CMD "python3 app.py"
-
-
-
-# For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.8-slim-buster
-
-EXPOSE 5002
-
-# Keeps Python from generating .pyc files in the container
-ENV PYTHONDONTWRITEBYTECODE=1
-
-# Turns off buffering for easier container logging
-ENV PYTHONUNBUFFERED=1
-
-# Install pip requirements
-COPY requirements.txt .
-RUN python -m pip install -r requirements.txt
-
-WORKDIR /app
-COPY . /app
-
-# Creates a non-root user and adds permission to access the /app folder
-# For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers
-RUN useradd appuser && chown -R appuser /app
-USER appuser
-
-# During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD [ "python3", "app:app", "--host=0.0.0.0:5002"]
-
-
-COMPOSE
-
-version: "3.8"
-
-services: 
-  web_client:
-    build: "./clients_api"
-    ports:
-      - "5002:5002"
-    links:
-      - desafio_bd
-  web_taxa:
-    build: "./taxas_api"
-    ports:
-      - "5003:5003"
-    links:
-      - desafio_bd
-  web_calculo:
-    build: "./calculo_api"
-    ports:
-      - "5004:5004"
-    links:
-      - desafio_bd
-  desafio_bd:
-    image: mongo:latest
-    hostname: mongodb
-    ports:
-      - '27018:27018'
-
-
-
-  volumes:
-    ./init-fb.js/docker-entrypoint-initdb.d/init-db.js:ro

@@ -2,7 +2,7 @@ app_clients:
   build: "./clients_api"
   command: python -u ./clients_api/app.py
   ports:
-    - "5002:5002"
+    - "${CLIENTS_API_PORT}:${CLIENTS_API_PORT}"
   volumes:
     - .:/app
   links:
@@ -11,7 +11,7 @@ app_taxas:
   build: "./taxas_api"
   command: python -u ./taxas_api/app.py
   ports:
-    - "5003:5003"
+    - "${TAXAS_API_PORT}:${TAXAS_API_PORT}"
   volumes:
     - .:/app
   links:
@@ -20,7 +20,7 @@ app_calculo:
   build: "./calculo_api"
   command: python -u ./calculo_api/app.py
   ports:
-    - "5004:5004"
+    - "${CALCULO_API_PORT}:${CALCULO_API_PORT}"
   volumes:
     - .:/app
   links:
@@ -30,7 +30,7 @@ db:
   hostname: desafio_mongodb
   environment:
     - MONGO_INITDB_DATABASE=desafio_bd
-    - MONGO_INITDB_ROOT_USERNAME=omachine
-    - MONGO_INITDB_ROOT_PASSWORD=Newlife4ever
+    - MONGO_INITDB_ROOT_USERNAME=${MONGODB_USERNAME}
+    - MONGO_INITDB_ROOT_PASSWORD=${MONGODB_PASSWORD}
   ports:
     - '27017:27017'

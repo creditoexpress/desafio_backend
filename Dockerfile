@@ -27,9 +27,3 @@ ENTRYPOINT [ "python3" ]
 
 # These commands will be replaced if user provides any command by himself
 CMD ["app.py"]
-
-#FROM mongo
-#
-#COPY clientes.json /init.json
-#
-#CMD mongoimport --host mongo --db reach-engine --collection users --type json --file /init.json --jsonArray

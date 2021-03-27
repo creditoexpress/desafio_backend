@@ -1,51 +1,22 @@
 import json
+from datetime import timedelta
 from flask import Flask, request, json, Response
 from flask_mongoengine import MongoEngine
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, JWTManager
 import requests
 
-taxas = [
-    {
-        "tipo": "NEGATIVADO",
-        "taxas": {
-            "6": 0.04,
-            "12": 0.045,
-            "18": 0.05,
-            "24": 0.053,
-            "36": 0.055
-        }
-    },
-    {
-        "tipo": "SCORE_ALTO",
-        "taxas": {
-            "6": 0.02,
-            "12": 0.025,
-            "18": 0.35,
-            "24": 0.038,
-            "36": 0.04
-        }
-    },
-    {
-        "tipo": "SCORE_BAIXO",
-        "taxas": {
-            "6": 0.03,
-            "12": 0.035,
-            "18": 0.45,
-            "24": 0.048,
-            "36": 0.05
-        }
-    }
-]
+from utils.taxas import taxas
 
 app = Flask(__name__)
 app.config['MONGODB_SETTINGS'] = {
     'db': 'db_credito_express',
     # to run locally
-    # 'host': 'localhost',
-    'host': 'mongodb://mongo',
+    'host': 'localhost',
+    # 'host': 'mongodb://mongo',
     'port': 27017
 }
 app.config["JWT_SECRET_KEY"] = "credito_express-secret-matheus"
+app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(days=5)
 jwt = JWTManager(app)
 db = MongoEngine()
 db.init_app(app)
@@ -68,18 +39,22 @@ class User(db.Document):
                 "negativado": self.negativado}
 
 
-# # DELETE ALL
-# User.objects.delete({})
+def inicializa_banco():
+    # # DELETE ALL
+    # User.objects.delete({})
 
-if User.objects().first() is None:
-    print("### ADICIONANDO CLIENTES A BASE DE DADOS ###")
-    with open('clientes.json') as f:
-        file_data = json.load(f)
-    for client in file_data:
-        User(nome=str(client['nome']), cpf=str(client['cpf']), celular=str(client['celular']),
-             score=int(client['score']), negativado=bool(client['negativado'])).save()
-else:
-    print("### USANDO BASE DE DADOS EXISTENTE ###")
+    if User.objects().first() is None:
+        print("### ADICIONANDO CLIENTES A BASE DE DADOS ###")
+        with open('clientes.json') as f:
+            file_data = json.load(f)
+        for client in file_data:
+            User(nome=str(client['nome']), cpf=str(client['cpf']), celular=str(client['celular']),
+                 score=int(client['score']), negativado=bool(client['negativado'])).save()
+    else:
+        print("### USANDO BASE DE DADOS EXISTENTE ###")
+
+
+inicializa_banco()
 
 
 @app.route("/login", methods=['POST'])
@@ -120,8 +95,6 @@ def simular_emprestimo():
     current_user_id = get_jwt_identity()
 
     user = User.objects(_id=current_user_id).first()
-
-    print(user.to_json())
 
     valor = data['valor']
     n_parcelas = data['numeroParcelas']

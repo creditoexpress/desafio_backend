@@ -23,8 +23,9 @@
 ```
 
 ## Acessando as rotas (As rotas de empréstimo e listagem de usuários são autenticadas com JWT)
+##Arquivo do postman no repositório
 
-### Login
+### Login (Retorna o usuário e token)
 
 ```shell
 curl --request POST \

@@ -13,8 +13,10 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 mongoengine==0.23.0
+progress==1.5
 PyJWT==2.0.1
 pymongo==3.11.3
+PyPrind==2.11.2
 requests==2.25.1
 urllib3==1.26.4
 Werkzeug==1.0.1

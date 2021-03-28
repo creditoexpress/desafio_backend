@@ -4,6 +4,8 @@ services:
         image: "mongo:latest"
         ports:
             - "27017:27017"
+        logging:
+            driver: none
     myreader:
         build: .
         depends_on:

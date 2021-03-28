@@ -19,7 +19,47 @@
 ```
 - Altere para localhost em app.config
 ```bash
-	python3 app.py
+	python app.py
+```
+
+## Acessando as rotas (As rotas de empréstimo e listagem de usuários são autenticadas com JWT)
+
+### Login
+
+```shell
+curl --request POST \
+  --url localhost:5000/v1/login \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "cpf": "03457618208",
+    "celular": "84964424738"
+}'
+```
+
+### Simular empréstimo
+
+```shell
+curl --request POST \
+  --url localhost:5000/v1/simular \
+  --header 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {token}' \
+  --data '{
+    "numeroParcelas": 12,
+    "valor": 950
+}'
+```
+
+### Listar todos usuários (sem paginação)
+
+```shell
+curl --request GET \
+  --url localhost:5000/v1/users \
+  --header 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {token}' \
+  --data '{
+    "numeroParcelas": 12,
+    "valor": 950
+}'
 ```
 
 ## Sobre a Crédito Express

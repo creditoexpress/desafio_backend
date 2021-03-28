@@ -9,7 +9,7 @@
 	docker compose build
 ```
 ```bash
-	docker compose build
+	docker compose up
 ```
 
 ### Localmente

@@ -5,8 +5,12 @@
 
 #### A primeira request demora mais pois está importanto a base de dados.
 
-- docker compose build
-- docker compose up
+```bash
+	docker compose build
+```
+```bash
+	docker compose build
+```
 
 ### Localmente
 

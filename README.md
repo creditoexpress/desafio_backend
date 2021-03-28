@@ -1,3 +1,19 @@
+## Como rodar o projeto
+
+
+### No docker
+
+#### A primeira request demora mais pois está importanto a base de dados.
+
+- docker compose build
+- docker compose up
+
+### Localmente
+
+- pip install -r requirements.txt 
+- Altere para localhost em app.config
+- python3 app.py
+
 ## Sobre a Crédito Express
 
 A Crédito Express é uma fintech voltada para servir instituições financeiras. Nosso objetivo é levar TAXAS ATRATIVAS para as pessoas, a partir do uso de tecnologia de ponta.

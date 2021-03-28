@@ -1,3 +1,64 @@
+## Como rodar o projeto
+
+
+### No docker
+
+#### A primeira request demora mais pois está importanto a base de dados.
+
+```bash
+	docker compose build
+```
+```bash
+	docker compose up
+```
+
+### Localmente
+
+```bash
+	pip install -r requirements.txt 
+```
+- Altere para localhost em app.config
+```bash
+	python app.py
+```
+
+## Acessando as rotas (As rotas de empréstimo e listagem de usuários são autenticadas com JWT)
+##Arquivo do postman no repositório
+
+### Login (Retorna o usuário e token)
+
+```shell
+curl --request POST \
+  --url localhost:5000/v1/login \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "cpf": "03457618208",
+    "celular": "84964424738"
+}'
+```
+
+### Simular empréstimo
+
+```shell
+curl --request POST \
+  --url localhost:5000/v1/simular \
+  --header 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {token}' \
+  --data '{
+    "numeroParcelas": 12,
+    "valor": 950
+}'
+```
+
+### Listar todos usuários (sem paginação)
+
+```shell
+curl --request GET \
+  --url localhost:5000/v1/users \
+  --header 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {token}'
+```
+
 ## Sobre a Crédito Express
 
 A Crédito Express é uma fintech voltada para servir instituições financeiras. Nosso objetivo é levar TAXAS ATRATIVAS para as pessoas, a partir do uso de tecnologia de ponta.

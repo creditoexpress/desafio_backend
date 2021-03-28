@@ -14,9 +14,13 @@
 
 ### Localmente
 
-- pip install -r requirements.txt 
+```bash
+	pip install -r requirements.txt 
+```
 - Altere para localhost em app.config
-- python3 app.py
+```bash
+	python3 app.py
+```
 
 ## Sobre a Crédito Express
 

@@ -43,7 +43,11 @@ curl --request POST \
 curl --request POST \
   --url localhost:5000/v1/simular \
   --header 'Content-Type: application/json' \
-  -H 'Authorization: Bearer {token}'
+  -H 'Authorization: Bearer {token}' \
+  --data '{
+    "numeroParcelas": 12,
+    "valor": 950
+}'
 ```
 
 ### Listar todos usuários (sem paginação)
@@ -52,11 +56,7 @@ curl --request POST \
 curl --request GET \
   --url localhost:5000/v1/users \
   --header 'Content-Type: application/json' \
-  -H 'Authorization: Bearer {token}' \
-  --data '{
-    "numeroParcelas": 12,
-    "valor": 950
-}'
+  -H 'Authorization: Bearer {token}'
 ```
 
 ## Sobre a Crédito Express

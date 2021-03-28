@@ -43,11 +43,7 @@ curl --request POST \
 curl --request POST \
   --url localhost:5000/v1/simular \
   --header 'Content-Type: application/json' \
-  -H 'Authorization: Bearer {token}' \
-  --data '{
-    "numeroParcelas": 12,
-    "valor": 950
-}'
+  -H 'Authorization: Bearer {token}'
 ```
 
 ### Listar todos usuários (sem paginação)

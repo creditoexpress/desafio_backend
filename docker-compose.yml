@@ -12,7 +12,7 @@ services:
       APP_DEBUG: "False"
       APP_PORT: 5000
       MONGODB_DATABASE: desafio
-      MONGODB_USERNAME: credexpm
+      MONGODB_USERNAME: credexpf
       MONGODB_PASSWORD: 111222
       MONGODB_HOSTNAME: mongodb
     ports: 

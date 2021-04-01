@@ -15,7 +15,7 @@ Executar shell para popular banco
 3. > use desafio
 4. > db.createUser({ user: "credexpf", pwd: "111222", roles: [ { role: "readWrite", db: "desafio" } ]})
 
-<br/><br/><br/><br/>
+<br/><br/>
 
 ##### Executar os testes
 > docker exec -it api pytest tests/ -v --cov=src

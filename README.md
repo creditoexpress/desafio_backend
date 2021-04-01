@@ -15,13 +15,15 @@ Executar shell para popular banco
 3. > use desafio
 4. > db.createUser({ user: "credexpf", pwd: "111222", roles: [ { role: "readWrite", db: "desafio" } ]})
 
+<br/><br/><br/><br/><br/><br/>
+
 ### Executar os testes
 > docker exec -it api pytest tests/ -v --cov=src
 
 ### Script para limpeza de arquivos de cache do python
 > find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
 
-
+<br/><br/><br/>
 
 
 ### Consultar usuário
@@ -33,6 +35,7 @@ Executar shell para popular banco
 ### Ver qual usuário está simulando (para testes)
 > curl --request GET --url http://127.0.0.1:4444/  --header 'Content-Type: application/json'  
 
+<br/><br/><br/><br/><br/><br/>
 
 ### Requisitos
 - Recomendo o uso de alguma ferramenta como Postman para testar as requisições, pois fazem controle de cookie.
@@ -40,4 +43,4 @@ Executar shell para popular banco
 - Será feita simulação no ultimo usuário consultado pelo 'findClient', caso não exista será feita simulação com um usuário de score 0.
 
 
-<!-- git remote set-url origin https://gustavodev91:HJRBxeDQ8@github.com/gustavodev91/desafio_backend.git -->
+

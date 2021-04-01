@@ -10,10 +10,10 @@ Executar shell para popular banco
 > docker exec -it mongodb sh /bin/mongo-exec.sh
 
 ### Para Criar usuário
-> docker exec -it mongodb bash
-> mongo -u credexpm -p 111222
-> use desafio
-> db.createUser({ user: "credexpf", pwd: "111222", roles: [ { role: "readWrite", db: "desafio" } ]})
+1. > docker exec -it mongodb bash
+2. > mongo -u credexpm -p 111222
+3. > use desafio
+4. > db.createUser({ user: "credexpf", pwd: "111222", roles: [ { role: "readWrite", db: "desafio" } ]})
 
 ### Executar os testes
 > docker exec -it api pytest tests/ -v --cov=src

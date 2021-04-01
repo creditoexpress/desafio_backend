@@ -1,0 +1,53 @@
+version: '3'
+services:
+  api:
+    build:
+      context: app
+      dockerfile: Dockerfile
+    container_name: api
+    image: digitalocean.com/flask-python:3.6
+    restart: unless-stopped
+    environment:
+      APP_ENV: "development"
+      APP_DEBUG: "False"
+      APP_PORT: 5000
+      MONGODB_DATABASE: desafio
+      MONGODB_USERNAME: credexpm
+      MONGODB_PASSWORD: 111222
+      MONGODB_HOSTNAME: mongodb
+    ports: 
+      - 4444:5000
+    volumes:
+      - ./app:/var/www
+    depends_on:
+      - mongodb
+    networks:
+      - backend
+
+  mongodb:
+    build:
+      context: mongo
+      dockerfile: Dockerfile
+    image: mongo:4.0.8
+    container_name: mongodb
+    restart: unless-stopped
+    command: mongod --auth
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: credexpm
+      MONGO_INITDB_ROOT_PASSWORD: 111222
+      MONGO_INITDB_DATABASE: desafio
+      MONGODB_DATA_DIR: /data/db
+      MONDODB_LOG_DIR: /dev/null
+    volumes:
+      - mongodbdata:/data/db      
+    networks:
+      - backend
+
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  mongodbdata:
+    driver: local

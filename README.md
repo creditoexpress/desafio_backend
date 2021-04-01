@@ -69,3 +69,14 @@ curl --request POST \
 
 - Faça um "fork" deste repositório na sua conta do Github;
 - Após completar o desafio, crie um pull request nesse repositório comparando a sua branch com a master com o seu nome no título;
+
+
+## Iniciar MongoDB
+docker exec -it mongodb sh /bin/mongo-exec.sh
+
+
+## Executar os testes
+docker exec -it api pytest tests/ -v --cov=src
+
+## Limpar chache do Python
+find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf

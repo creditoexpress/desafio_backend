@@ -35,7 +35,7 @@ Executar shell para popular banco
 
 <br/><br/><br/><br/>
 
-### Requisitos
+### Considerações
 - Recomendo o uso de alguma ferramenta como Postman para testar as requisições, pois fazem controle de cookie.
 - Deve-se iniciar o usuário no banco de dados.
 - Será feita simulação no ultimo usuário consultado pelo 'findClient', caso não exista será feita simulação com um usuário de score 0.

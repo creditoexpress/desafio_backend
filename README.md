@@ -3,17 +3,17 @@ Neste arquivo encontra-se o modo de execução, da solução proposta para o [de
 
 
 ### Executar
-1 - Iniciar docker
+Iniciar docker
 > docker-compose up -d --build
 
-2- Executar shell para popular banco
+Executar shell para popular banco
 > docker exec -it mongodb sh /bin/mongo-exec.sh
 
 ### Para Criar usuário
-1. > docker exec -it mongodb bash
-2. > mongo -u credexpm -p 111222
-3. > use desafio
-4. > db.createUser({ user: "credexpf", pwd: "111222", roles: [ { role: "readWrite", db: "desafio" } ]})
+> docker exec -it mongodb bash
+> mongo -u credexpm -p 111222
+> use desafio
+> db.createUser({ user: "credexpf", pwd: "111222", roles: [ { role: "readWrite", db: "desafio" } ]})
 
 ### Executar os testes
 > docker exec -it api pytest tests/ -v --cov=src

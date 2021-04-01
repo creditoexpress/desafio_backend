@@ -25,7 +25,7 @@ Executar shell para popular banco
 
 
 ##### Consultar usuário
-> curl --request GET --url http://127.0.0.1:4444/findClient?cpf=19867230540  --header 'Content-Type: application/json'  
+> curl --request GET --url http://127.0.0.1:4444/findClient?cpf=19867230540&&cel=31981648757  --header 'Content-Type: application/json'  
 
 ##### Simular empréstimo
 > curl -v --request POST --cookie /tmp/exit   --url http://127.0.0.1:4444/simular   --header 'Content-Type: application/json'   --data '{ "numeroParcelas": 12,"valor": 10000}'

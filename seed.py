@@ -2,9 +2,9 @@ from json import loads
 import sys
 
 from args import treat_args
-from app.models.cliente import Cliente
-from app.models.taxa import Taxa
-from app.services.database import Database
+from application.models.cliente import Cliente
+from application.models.taxa import Taxa
+from application.services.database import Database
 
 
 class Seed:
@@ -40,7 +40,7 @@ class Seed:
                                 score=cliente_json['score'],
                                 negativado=cliente_json['negativado']
             )
-            clientes.append(cliente)
+            clientes.applicationend(cliente)
         
         Database().insert_clientes(clientes)
 
@@ -58,7 +58,7 @@ class Seed:
                         tipo=taxa_json['tipo'],
                         taxas=taxa_json['taxas']
             )
-            taxas.append(taxa)
+            taxas.applicationend(taxa)
         
         Database().insert_taxas(taxas)
 

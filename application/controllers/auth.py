@@ -1,8 +1,8 @@
 from flask import Blueprint, jsonify, make_response, request
 from functools import wraps
 
-from app.services.auth import Auth, JWT
-from app.services.cpf import validate_cpf
+from application.services.auth import Auth, JWT
+from application.services.cpf import validate_cpf
 
 
 auth = Blueprint('auth', __name__)

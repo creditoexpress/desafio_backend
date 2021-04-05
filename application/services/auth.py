@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from jwt import encode as jwt_encode, decode as jwt_decode
 from jwt.exceptions import InvalidTokenError
 
-from app.services.database import Database
+from application.services.database import Database
 
 
 class Auth:

@@ -1,7 +1,7 @@
 from json import loads
 from requests import post
 
-from app.services.database import Database
+from application.services.database import Database
 
 
 class Loan:
@@ -44,7 +44,7 @@ class Loan:
     def calculate_api(payload):
 
         url = 'https://us-central1-creditoexpress-dev.cloudfunctions.net/teste-backend'
-        headers = {'Content-Type': 'application/json'}
+        headers = {'Content-Type': 'applicationlication/json'}
         response = post(url, headers=headers, json=payload)
 
         return response

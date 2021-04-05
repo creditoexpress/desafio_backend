@@ -1,8 +1,8 @@
 from flask import Blueprint, jsonify, make_response, request
 from functools import wraps
 
-from app.services.auth import Auth, JWT
-from app.services.loan import Loan
+from application.services.auth import Auth, JWT
+from application.services.loan import Loan
 
 
 loan = Blueprint('loan', __name__)

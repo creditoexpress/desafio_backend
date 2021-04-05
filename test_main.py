@@ -1,11 +1,11 @@
 import pytest
 
-from main import app
+from main import application
 
 
 @pytest.fixture
 def client():
-    client = app.test_client()
+    client = application.test_client()
 
     yield client
 

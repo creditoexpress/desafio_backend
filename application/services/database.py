@@ -1,7 +1,7 @@
 from mongoengine import connect, disconnect
 
-from app.models.cliente import Cliente
-from app.models.taxa import Taxa
+from application.models.cliente import Cliente
+from application.models.taxa import Taxa
 
 
 class Database:

@@ -4,9 +4,9 @@ ENV PYTHONUNBUFFERED True
 
 ENV APP_HOME /application
 WORKDIR $APP_HOME
-COPY /application /application
-COPY ./requirements.txt /application
+COPY . ./
+COPY ../requirements.txt /application
 
 RUN pip install -r /application/requirements.txt
 
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout main:app
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app

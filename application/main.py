@@ -1,5 +1,6 @@
 from flask import Blueprint, Flask
 from flask_cors import CORS
+from os import environ
 
 from application.controllers.auth import auth
 from application.controllers.loan import loan

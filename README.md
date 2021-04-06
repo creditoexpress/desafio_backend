@@ -69,3 +69,52 @@ curl --request POST \
 
 - Faça um "fork" deste repositório na sua conta do Github;
 - Após completar o desafio, crie um pull request nesse repositório comparando a sua branch com a master com o seu nome no título;
+
+## Instruções para executar o desafio
+
+- O desafio foi feito utilizando tecnologias amplamente utilizadas e validadas pelo mercado como um todo, tendo em vista a preferência pela utilização de serviços em cloud quando possível, a adoção do JSON Web Token para identificar e garantir o acesso seguro a aplicação mesmo que seja executada de forma "stateless", a utilização de um "seeder" para popular o banco de dados com os dados fornecidos via arquivo JSON, a implementação de testes unitários para validação da aplicação e a utilização do banco de dados MongoDB;
+- O banco de dados utilizados foi o MongoDB em sua versão cloud, como se trata de uma conta de testes em sua versão gratuita, limitada e os dados contidos na aplicação não são sigilosos, a URL de conexão foi mantida exposta no código e este banco será desativado ao final da avaliação do desafio;
+- O projeto possui como único pré-requisito a paltaforma Docker;
+- Para executar o projeto, clone o repositório, monte a imagem do desafio e suba uma instância da aplicação seguindo os comandos abaixo;
+
+```shell
+docker build -t credit-express-challenge-crc
+docker run -d -p 8080:80 credit-express-challenge-crc
+```
+
+- Após a montagem da imagem e a execução do container, a aplicação estará disponível geralmente no endereço 127.0.0.1:8080;
+- A requisição de identificação do usuário exigida no projeto pode ser feita através do endpoint /api/auth/identify utilizando o método POST e o payload a seguir;
+
+```javascript
+{
+	"cpf": "93762814031",
+	"celular": "71935228778"
+}
+```
+
+- Com o retorno da requisição de identificação, guardamos o token gerado para enviar no header Authorization na próxima requisição;
+- Para fazer a próxima requisição, utilizaremos o endpoint /api/loan/simulation com o método POST e o payload a seguir, além de passar o token adquirido na requisição anterior no header Authorization;
+
+```javascript
+{
+	"numeroParcelas": 12,
+	"valor": 10000
+}
+```
+
+- Caso tudo ocorra dentro dos parâmetros da aplicação retorno deverá ser um payload com os dados do empréstimo conforme o payload abaixo;
+
+```javascript
+{
+    "numeroParcelas": 12,
+    "outrasTaxas": 85,
+    "total": 10535.0,
+    "valorJuros": 450.0,
+    "valorParcela": 877.92,
+    "valorSolicitado": 10000
+}
+```
+
+## Segunda alternativa
+
+- Caso ocorram problemas durante a montagem do ambiente, há uma versão ativa na Google Cloud Platform utilizando o serviço Cloud Run e rodando um container "stateless", a aplicação é a mesma e pode ser utilizada conforme explicado anteriormente, mas a url base será: https://creditexpress-dzpf2xv2eq-uc.a.run.app;

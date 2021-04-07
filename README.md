@@ -58,9 +58,9 @@ docker-compose up -d
  -> Exemplo de *body* para simulação de empréstimo:
 
 	    {
-		    "cpf": "93762814031",
-		    "numeroParcelas": 12,
-		    "valor": 10000
+			"cpf": "93762814031",
+			"numeroParcelas": 12,
+			"valor": 10000
 	   }
 	O retorno deverá ser:
 		

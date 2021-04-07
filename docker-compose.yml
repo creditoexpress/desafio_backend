@@ -1,0 +1,31 @@
+version: '3'
+services:
+  api:
+    container_name: python-api
+    restart: always
+    networks:
+      - default
+    working_dir: /code
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/code
+    expose:
+      - "5000"
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_USER=ce_user
+      - DB_PASS=znmhVq6ninrBwC6
+      - DB_HOST=creditoexpresscluster.uyijj.mongodb.net
+      - SECRET_KEY=uSDMmdutBP
+
+  mongo_seed:
+    image: 'pkosiec/mongo-seeding:3.6.0'
+    environment:
+      - DROP_COLLECTIONS=true
+      - DB_URI=mongodb+srv://ce_user:znmhVq6ninrBwC6@creditoexpresscluster.uyijj.mongodb.net/ce_database?authSource=admin&retryWrites=true&w=majority
+    volumes:
+      - ./migrations/data/:/data-import/dev/
+    working_dir: /data-import/dev/

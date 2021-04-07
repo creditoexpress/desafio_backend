@@ -1,0 +1,7 @@
+from .alreadyExistsClientException import AlreadyExistsClientException
+from .clientNotFoundException import ClientNotFoundException
+from .invalidClientBodyException import InvalidClientBodyException
+from .invalidCPFException import InvalidCPFException
+from .invalidLoanBodyException import InvalidLoanBodyException
+from .unauthorizedException import UnauthorizedException
+from .unableToAuthException import UnableToAuthException

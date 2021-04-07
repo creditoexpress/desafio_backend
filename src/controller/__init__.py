@@ -1,0 +1,2 @@
+from .clients_controllers import clients_routes
+from .loan_controllers import loan_routes

@@ -1,0 +1,7 @@
+flask
+mongoengine
+validate-docbr
+requests
+pymongo[srv]
+pyjwt
+pytest

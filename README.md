@@ -61,7 +61,7 @@ docker-compose up -d
 		    "cpf": "93762814031",
 		    "numeroParcelas": 12,
 		    "valor": 10000
-	    }
+	   }
 	O retorno deverá ser:
 		
 

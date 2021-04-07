@@ -33,8 +33,8 @@ docker-compose up -d
  -> Exemplo de *body* para cadastro de um cliente:
 
        {
-	       "nome": "Fábio Erickson",
-	       "cpf": "72168204012",
+	    	"nome": "Fábio Erickson",
+	    	"cpf": "72168204012",
 			"celular": "34999999999"
        }
 	
@@ -44,13 +44,13 @@ docker-compose up -d
  -> Exemplo de *body* para autenticação de um cliente:
 
        {
-	       "cpf": "93762814031",
+	    	"cpf": "93762814031",
 			"celular": "71935228778"
        }
 	O retorno deverá ser:
 
        {
-	       "status": "Cliente autorizado",
+	    	"status": "Cliente autorizado",
 			"token": "Bearer eyJ0eXAiOiJKV1QiLCzUxMiJ9...7QAyz3A"
        }
 
@@ -66,12 +66,12 @@ docker-compose up -d
 		
 
 		{
-			  "numeroParcelas": 12,
-			  "outrasTaxas": 85,
-    		  "total": 10535.0,
-    		  "valorJuros": 450.0,
-    		  "valorParcela": 877.92,
-    		  "valorSolicitado": 10000
+			"numeroParcelas": 12,
+			"outrasTaxas": 85,
+    		"total": 10535.0,
+    		"valorJuros": 450.0,
+    		"valorParcela": 877.92,
+    		"valorSolicitado": 10000
 	   }
 
 ## Testes

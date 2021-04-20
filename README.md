@@ -1,5 +1,5 @@
 # **Python + MongoDB**
-Neste arquivo encontra-se o modo de execução, da solução proposta para o [desafio](https://github.com/creditoexpress/desafio_backend)
+Modo de execução
 
 
 ### Executar
